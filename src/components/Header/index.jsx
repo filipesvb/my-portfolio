@@ -1,15 +1,19 @@
 import Wrapper from '../Wrapper';
 import LanguageSelect from '../LanguageSelect';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import SocialList from './components/SocialList';
 import Menu from './components/Menu';
+import { useTranslation } from 'react-i18next';
 
 const Header = () => {
-  const [language, setLanguage] = useState('PT');
+  const { i18n } = useTranslation();
+  const [language, setLanguage] = useState(i18n.language);
 
   const changeLanguage = (language) => {
-    setLanguage(language);
+    i18n.changeLanguage(language)
+    setLanguage(language)
   };
+
 
   return (
     <header className="w-full  py-5">

@@ -1,9 +1,8 @@
 import { useState } from 'react';
 import DownArrow from '../icons/DownArrow.jsx';
+import { supportedLngs } from '../../i18n.js'
 
-const options = ['PT', 'EN'];
-
-const LanguageSelect = ({ selectedOption = 'PT', selectOption }) => {
+const LanguageSelect = ({ selectedOption, selectOption, languages }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleButtonClick = () => {
@@ -24,7 +23,7 @@ const LanguageSelect = ({ selectedOption = 'PT', selectOption }) => {
       {isOpen && (
         <div className="bg-white text-black absolute top-8 w-10">
           <ul className="flex-col flex items-center">
-            {options.map((language) => (
+            {supportedLngs.map((language) => (
               <li
                 onClick={() => {
                   handleSelectOption(language);
