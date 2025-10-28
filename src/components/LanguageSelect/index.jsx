@@ -16,7 +16,7 @@ const LanguageSelect = ({ selectedOption, selectOption, languages }) => {
 
   return (
     <div className="flex items-center relative">
-      <span>{selectedOption}</span>
+      <span>{selectedOption.toUpperCase()}</span>
       <button onClick={handleButtonClick}>
         <DownArrow />
       </button>
@@ -29,7 +29,7 @@ const LanguageSelect = ({ selectedOption, selectOption, languages }) => {
                   handleSelectOption(language);
                 }}
               >
-                {language}
+                {language.toUpperCase()}
               </li>
             ))}
           </ul>

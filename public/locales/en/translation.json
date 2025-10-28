@@ -1,6 +1,7 @@
 {
-    "home_inicio": "HOME",
-    "home_projetos": "PROJECTS",
-    "home_sobre": "ABOUT ME",
-    "home_contato": "CONTACT"
+    "home_inicio": "Home",
+    "home_projetos": "Projects",
+    "home_sobre": "About me",
+    "home_contato": "Contact",
+    "hero_card_job": "Fullstack Developer"
 }

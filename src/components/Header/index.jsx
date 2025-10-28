@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import SocialList from './components/SocialList';
 import Menu from './components/Menu';
 import { useTranslation } from 'react-i18next';
+import Divider from './components/Divider';
 
 const Header = () => {
   const { i18n } = useTranslation();
@@ -16,7 +17,7 @@ const Header = () => {
 
 
   return (
-    <header className="w-full  py-5">
+    <header className="w-full  py-5 font-inter">
       <Wrapper>
         <div className="flex justify-between">
           <Menu />
@@ -28,6 +29,7 @@ const Header = () => {
             />
           </div>
         </div>
+        <Divider />
       </Wrapper>
     </header>
   );
