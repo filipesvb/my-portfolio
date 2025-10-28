@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next';
 const AnimatedText = () => {
   const { t, i18n } = useTranslation();
   return (
-    <div className="my-4 pl-4 border-1 py-4">
+    <div className="mt-10 my-4 pl-4 border-1 py-4">
       <TypingText
         key={i18n.language}
         text={[
