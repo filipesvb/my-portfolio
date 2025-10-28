@@ -16,7 +16,7 @@ const AnimatedText = () => {
         pauseDuration={1500}
         showCursor={true}
         cursorCharacter="|"
-        className="text-2xl font-bold"
+        className="text-xl font-bold"
         variableSpeed={{ min: 50, max: 120 }}
       />
     </div>
