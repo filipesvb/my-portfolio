@@ -1,7 +1,10 @@
 {
-    "home_inicio": "Início",
-    "home_projetos": "Projetos",
-    "home_sobre": "Sobre mim",
-    "home_contato": "Contato",
-    "hero_card_job": "Desenvolvedor Fullstack"
+  "home_inicio": "Início",
+  "home_projetos": "Projetos",
+  "home_sobre": "Sobre mim",
+  "home_contato": "Contato",
+  "hero_card_job": "Desenvolvedor Fullstack",
+  "hero_typewriter_landingPages": "Landing Pages",
+  "hero_typewriter_institucional": "Páginas institucionais",
+  "hero_typewriter_dados": "Sistemas de gerenciamento de dados"
 }
