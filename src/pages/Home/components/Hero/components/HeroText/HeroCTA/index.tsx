@@ -1,12 +1,12 @@
 import Button from '@/components/Button';
 
-const HeroCTA = () => {
+const HeroCTA = ({orcamentoTxt, ctaTxt}: {orcamentoTxt: string, ctaTxt: string}) => {
   return (
     <div>
       <h3 className="font-bold text-2xl mt-10 my-2">
-        Quer fazer um orçamento?
+        {orcamentoTxt}
       </h3>
-      <Button>Entre em contato</Button>
+      <Button>{ctaTxt}</Button>
     </div>
   );
 };

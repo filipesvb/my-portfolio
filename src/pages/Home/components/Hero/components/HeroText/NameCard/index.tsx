@@ -1,7 +1,6 @@
 import { useTranslation } from 'react-i18next';
 
-const NameCard = () => {
-  const { t } = useTranslation();
+const NameCard = ({card_job}: {card_job: string}) => {
 
   return (
     <div className="flex flex-col relative border-1">
@@ -16,7 +15,7 @@ const NameCard = () => {
         Vilas Bôas
       </div>
       <div className="pl-4 w-full bg-white text-[#171523] font-bold text-xl py-2">
-        {t('hero_card_job')}
+        {card_job}
       </div>
     </div>
   );

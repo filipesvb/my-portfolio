@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 
 interface ImageCTAProps {
   active: boolean,
@@ -6,6 +7,8 @@ interface ImageCTAProps {
 }
 
 const ImageCTA = ({active, x, y} : ImageCTAProps) => {
+  const { t } = useTranslation("hero");
+  
   return (
 
     active ?
@@ -14,7 +17,7 @@ const ImageCTA = ({active, x, y} : ImageCTAProps) => {
        transition-all duration-400 ease-out"
       style={{"transform": `translate(${x - 50}px, ${y -50}px)`,"left": "0%", "top": `0%`}}
     >
-      GET IN TOUCH
+      {t("hero_image_cta")}
     </div>
     :
     <></>

@@ -16,12 +16,13 @@ i18n
     .init({
         debug: isDev, // Enable logging for development
         supportedLngs,
+        ns: ['header', 'hero'],
         fallbackLng: ['en'],
         interpolation: {
             escapeValue: false,
         },
         backend: {
-            loadPath: '/locales/{{lng}}/translation.json'
+            loadPath: '/locales/{{lng}}/{{ns}}.json'
         },
     });
 

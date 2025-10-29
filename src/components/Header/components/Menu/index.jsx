@@ -6,17 +6,17 @@ const menuOptions = ['PROJETOS', 'SOBRE', 'CONTATO'];
 
 const Menu = () => {
 
-  const { t } = useTranslation()
+  const { t } = useTranslation('header')
 
   return (
     <nav className="">
       <ul className="flex gap-10">
         <ListItem key={'inicio'}>
-          <Link to={`/`}>{t('home_inicio')}</Link>
+          <Link to={`/`}>{t('header_inicio')}</Link>
         </ListItem>
         {menuOptions.map((opt, i) => (
           <ListItem key={i}>
-            <Link to={`/${opt.toLowerCase()}`}>{t(`home_${opt.toLowerCase()}`)}</Link>
+            <Link to={`/${opt.toLowerCase()}`}>{t(`header_${opt.toLowerCase()}`)}</Link>
           </ListItem>)
         )}
       </ul>
