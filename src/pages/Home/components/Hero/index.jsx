@@ -1,4 +1,4 @@
-import HeroImage from "./components/HeroImage";
+import HeroImageContainer from "./components/HeroImageContainer";
 import HeroText from "./components/HeroText";
 
 const Hero = () => {
@@ -6,7 +6,7 @@ const Hero = () => {
     <section className='flex w-full'>
 
       <HeroText />
-      <HeroImage />
+      <HeroImageContainer />
       
     </section>
   )

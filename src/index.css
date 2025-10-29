@@ -7,7 +7,7 @@
 
 @theme {
   --font-inter: 'Inter', 'sans-serif';
-  --font-azeret-monos: 'Azeret Mono', 'mono';
+  --font-azeret-mono: 'Azeret Mono', 'mono';
 }
 
 @layer base {
