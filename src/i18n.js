@@ -16,7 +16,7 @@ i18n
     .init({
         debug: isDev, // Enable logging for development
         supportedLngs,
-        ns: ['header', 'hero'],
+        ns: ['header', 'hero', 'service_section'],
         fallbackLng: ['en'],
         interpolation: {
             escapeValue: false,

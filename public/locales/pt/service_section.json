@@ -1,0 +1,17 @@
+{
+  "section_title": "Meus Serviços",
+  "section_cards": {
+    "card_web": {
+      "title": "Web Design",
+      "description": "Criação de websites modernos, responsivos e visualmente atrativos, com foco em desempenho, usabilidade e identidade visual personalizada."
+    },
+    "card_api": {
+      "title": "Desenvolvimento de API",
+      "description": "Construção de APIs robustas e escaláveis para servidores, integrando bancos de dados e fornecendo endpoints seguros e eficientes para aplicações web e móveis."
+    },
+    "card_data": {
+      "title": "Banco de Dados",
+      "description": "Modelagem, implementação e otimização de bancos de dados relacionais e não-relacionais, garantindo integridade, segurança e alta performance no acesso aos dados."
+    }
+  }
+}
