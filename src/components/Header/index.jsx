@@ -29,7 +29,6 @@ const Header = () => {
             />
           </div>
         </div>
-        <Divider />
       </Wrapper>
     </header>
   );
