@@ -1,7 +1,7 @@
 import { ReactNode } from "react";
 
-const Section = ({children, variant}: {children: ReactNode, variant?: object}) => {
-  return <section className="mt-20" style={variant}>{children}</section>
+const Section = ({children, className}: {children: ReactNode, className?: string}) => {
+  return <section className={`mt-20 ${className}`} >{children}</section>
 }
 
 export default Section;

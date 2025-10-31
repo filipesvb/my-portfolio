@@ -1,3 +1,4 @@
+import Footer from '@/components/Footer';
 import Wrapper from '../../components/Wrapper';
 import Hero from './components/Hero';
 import ProjectSection from './components/ProjectSection';
@@ -12,6 +13,7 @@ function App() {
           <ServiceSection />
           <ProjectSection />
         </Wrapper>
+        <Footer />
       </div>
     </>
   );

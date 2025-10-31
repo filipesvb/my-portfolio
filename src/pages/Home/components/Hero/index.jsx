@@ -4,7 +4,7 @@ import Section from '../../../../components/Section';
 
 const Hero = () => {
   return (
-    <Section className='flex w-full' variant={{'display': 'flex', 'width': '100%', 'justify-content': "space-between"}}>
+    <Section className="flex flex-col md:flex-row">
     
       <HeroText />
       <HeroImageContainer />
