@@ -1,7 +1,7 @@
-import ImageCTA from '../ImageCTA'
-import { useState, useRef } from 'react'
+import { useState, useRef, ReactNode } from 'react';
+import CTABall from './components/CTABall';
 
-const HeroImage = ({ img } : {img: string}) => {
+const HoverableWithBall = ({children, className, ballText} : {children: ReactNode,className: string, ballText: string}) => {
   const [active, setActive] = useState(false);
   const [pos, setPos] = useState({x: 0, y: 0});
   const circleRef = useRef<HTMLDivElement>(null);
@@ -16,15 +16,17 @@ const HeroImage = ({ img } : {img: string}) => {
     setPos({x, y})
   }
   return (
-    <div className="rounded-full w-2/3 pt-[65%] border border-dotted relative"
+    <div className={`relative cursor-none ${className}`}
       ref={circleRef}
       onMouseMove={handleCTAHover}
       onMouseEnter={() => {setActive(true)}}
       onMouseLeave={() => {setActive(false)}}
     >
-      <ImageCTA active={active} x={pos.x} y={pos.y}/>
+      {children}
+      <CTABall active={active} x={pos.x} y={pos.y} text={ballText} />
     </div>
   )
 }
 
-export default HeroImage;
+export default HoverableWithBall;
+
