@@ -3,6 +3,8 @@
 
 @import 'tw-animate-css';
 
+@plugin "@tailwindcss/typography";
+
 @custom-variant dark (&:is(.dark *));
 
 @theme {
@@ -139,4 +141,8 @@ body {
   body {
     @apply bg-background text-foreground;
   }
+}
+
+.prose {
+  --tw-prose-bold: #00d5ff;
 }

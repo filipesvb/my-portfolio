@@ -3,6 +3,7 @@ import Wrapper from '../../components/Wrapper';
 import Hero from './components/Hero';
 import ProjectSection from './components/ProjectSection';
 import ServiceSection from './components/ServiceSection';
+import AboutSection from './components/AboutSection';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
           <Hero />
           <ServiceSection />
           <ProjectSection />
+          <AboutSection />
         </Wrapper>
         <Footer />
       </div>
