@@ -1,10 +1,10 @@
-import HoverableWithBall from "@/components/HoverableWithBall";
-import CardTitle from "../../../../../../components/CardTitle";
+import HoverableWithBall from '@/components/HoverableWithBall';
+import CardTitle from '../../../../../../components/CardTitle';
 import {
   CardBody,
   CardContainer,
   CardItem,
-} from "@/components/ui/shadcn-io/3d-card";
+} from '@/components/ui/shadcn-io/3d-card';
 
 type Project = {
   title: string;
@@ -17,11 +17,11 @@ const ProjectSingle = ({ title, description, image }: Project) => {
     <div className=" ">
       <CardContainer className="inter-var" containerClassName="py-8">
         <CardBody className=" relative group/card w-auto sm:w-[24rem] h-auto rounded-xl">
-            <HoverableWithBall ballText="Veja mais" className="overflow-hidden">
-              <div className="h-150 border-2">
-                {/* <img src={"image"} className='w-full' /> */}
-              </div>
-            </HoverableWithBall>
+          <HoverableWithBall ballText="Veja mais" className="overflow-hidden">
+            <div className="h-150 border-2">
+              {/* <img src={"image"} className='w-full' /> */}
+            </div>
+          </HoverableWithBall>
         </CardBody>
       </CardContainer>
       <CardTitle>{title}</CardTitle>
