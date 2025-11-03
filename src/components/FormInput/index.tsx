@@ -17,7 +17,7 @@ const FormInput = ({
 }) => {
   return (
     <input
-      autoComplete="off"
+      autoComplete="invalid"
       type={tipo}
       className={`w-full h-full border-0 outline-0 ${className}`}
       placeholder={placeholder}

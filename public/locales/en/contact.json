@@ -1,0 +1,35 @@
+{
+  "section_title": "Get in touch",
+  "section_description": "Want to talk about a project you have in mind, or did you like my portfolio and want to hire me? Drop me a message!",
+  "form": {
+    "name": {
+      "label": "Name",
+      "placeholder": "John Smith"
+    },
+    "email": {
+      "label": "Email",
+      "placeholder": "youremail@email.com"
+    },
+    "telefone": {
+      "label": "Phone",
+      "placeholder": "(123) 45678-9012"
+    },
+    "assunto": {
+      "label": "Subject",
+      "placeholder": "Select",
+      "options": {
+        "servico": "Hire for a service",
+        "entrevista": "Schedule an interview"
+      }
+    },
+    "mensagem": {
+      "label": "Message",
+      "placeholder": {
+        "servico": "Hi, my name is {{name}}, and I’d like to hire your services",
+        "entrevista": "Hi, my name is {{name}}, and I’d like to schedule an interview",
+        "default": "Please, select a subject"
+      }
+    },
+    "enviar": "Send"
+  }
+}

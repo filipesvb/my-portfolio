@@ -1,0 +1,35 @@
+{
+  "section_title": "Entre em contato",
+  "section_description": "Quer conversar a respeito de um projeto que tem mente, ou se interessou em meu portifólio e quer me contratar? Me dá um toque!",
+  "form": {
+    "name": {
+      "label": "Nome",
+      "placeholder":"João da Silva"
+    },
+    "email": {
+      "label": "Email",
+      "placeholder":"seuemail@email.com"
+    },
+    "telefone": {
+      "label": "Telefone",
+      "placeholder":"(123) 45678-9012"
+    },
+    "assunto": {
+      "label": "Assunto",
+      "placeholder": "Selecione",
+      "options": {
+        "servico": "Contratar para um serviço",
+        "entrevista": "Agendar uma entrevista"
+      }
+    },
+    "mensagem": {
+      "label": "Mensagem",
+      "placeholder": {
+        "servico": "Olá, eu me chamo {{name}}, e gostaria de contratar seus serviços",
+        "entrevista": "Olá, eu me chamo {{name}}, e gostaria de agendar uma entrevista",
+        "default": "Por favor, selecione um assunto"
+      }
+    },
+    "enviar": "Enviar"
+  }
+}
