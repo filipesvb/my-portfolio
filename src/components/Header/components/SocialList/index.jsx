@@ -3,7 +3,7 @@ import Github from '../../../icons/GithubIcon';
 
 const SocialList = () => {
   return (
-    <div className="flex gap-4">
+    <div className="flex gap-4 items-center">
       <Linkedin />
       <Github />
     </div>

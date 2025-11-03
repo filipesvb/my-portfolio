@@ -3,8 +3,8 @@ export default function Github(props) {
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 24 25"
-      width="2em"
-      height="2em"
+      width="2.2em"
+      height="2.2em"
       {...props}
     >
       <path

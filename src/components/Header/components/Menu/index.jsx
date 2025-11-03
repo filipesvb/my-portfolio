@@ -4,13 +4,17 @@ import { useTranslation } from 'react-i18next'
 
 const menuOptions = ['PROJETOS', 'SOBRE', 'CONTATO'];
 
-const Menu = () => {
+const Menu = ({variant}) => {
 
   const { t } = useTranslation('header')
 
+  const menuClassName = {
+    "footer": "flex flex-col gap-4 text-black"
+  }
+
   return (
     <nav className="">
-      <ul className="flex gap-10">
+      <ul className={menuClassName[variant] || `flex gap-10`}>
         <ListItem key={'inicio'}>
           <Link to={`/`}>{t('header_inicio')}</Link>
         </ListItem>
