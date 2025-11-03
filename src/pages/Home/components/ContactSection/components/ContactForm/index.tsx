@@ -40,6 +40,7 @@ const ContactForm = () => {
         name,
         email,
         message,
+        subject
       }),
     });
 
@@ -50,9 +51,14 @@ const ContactForm = () => {
       alert('Erro ao enviar email: ' + data.error);
     }
   };
+
+  const testHandleSubmit = async (e) => {
+    e.preventDefault();
+    console.log('enviado')
+  }
   
   return (
-    <form className=" p-8  text-black flex flex-col gap-5" onSubmit={handleSubmit}>
+    <form className=" p-8  text-black flex flex-col gap-5" onSubmit={testHandleSubmit}>
       <fieldset className="grid grid-cols-2 grid-rows-2 gap-4">
         <label>
           <span className="">{t('form.name.label')}</span>
@@ -102,6 +108,7 @@ const ContactForm = () => {
             <select
               className={`w-full h-full border-0 outline-0 ${formInputStyle}`}
               onChange={(e) => {setSubject(e.target.value)}}
+              required
             >
               <option value="default" selected disabled>
                 {t('form.assunto.placeholder')}
