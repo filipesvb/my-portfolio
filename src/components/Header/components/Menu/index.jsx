@@ -9,7 +9,7 @@ const Menu = ({variant}) => {
   const { t } = useTranslation('header')
 
   const menuClassName = {
-    "footer": "flex flex-col gap-4 text-black"
+    "footer": "flex flex-col gap-4"
   }
 
   return (
