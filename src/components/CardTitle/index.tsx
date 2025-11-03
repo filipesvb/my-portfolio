@@ -1,8 +1,8 @@
 import { ReactNode } from "react";
 
-const CardTitle = ({children} : {children: ReactNode}) => {
+const CardTitle = ({children, className} : {children: ReactNode, className?: string}) => {
   return (
-    <h3 className="text-xl font-extrabold py-3">{children}</h3>
+    <h3 className={`text-xl font-extrabold py-3 ${className}`}>{children}</h3>
   )
 }
 

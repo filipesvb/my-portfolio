@@ -14,7 +14,7 @@ const ProjectContainer = () => {
             <ProjectSingle
               key={p.id}
               title={t(`${p.id}.title`)}
-              description={t(`${p.id}.description`)}
+              description={t(`${p.id}.shortDescription`)}
               image={p.image}
             />
           ))}
