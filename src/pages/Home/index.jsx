@@ -17,7 +17,6 @@ function App() {
           <AboutSection />
           <ContactSection />
         </Wrapper>
-        <Footer />
       </div>
     </>
   );

@@ -1,23 +1,34 @@
 import Card3D from "@/components/Card3D";
 import CardTitle from "@/components/CardTitle";
 import ProjectSingle from "../ProjectSingle";
-import { projects } from '../../../../data/projects'
+import { type Project } from '../../../../data/projects'
 import { useTranslation } from "react-i18next";
 
-const ProjectContainer = () => {
+const ProjectContainer = ({projects, query} : {projects: Project[], query: string}) => {
 
   const { t } = useTranslation('projects')
-  
+
+
   return (
     <div className="mt-6 w-full py-5 flex flex-col gap-15">
-      {projects.map((p, i) => (
-        <ProjectSingle
-          {...(i % 2 === 0 && {inverted: true})}
-          key={p.id}
-          title={t(`${p.id}.title`)}
-          description={t(`${p.id}.longDescription`)}
-        />
-      ))}
+      {projects.length > 0 ? projects.map((p, i) => {
+
+        const desc = t(`${p.id}.longDescription`);
+      
+        return (
+            <ProjectSingle
+              {...(i % 2 === 0 && {inverted: true})}
+              key={p.id}
+              title={t(`${p.id}.title`)}
+              description={desc}
+              query={query}
+            />
+        )
+      
+      }) : 
+      (
+        <div>Não achei o que está procurando... =/</div>
+      )}
     </div>
   )
 }
