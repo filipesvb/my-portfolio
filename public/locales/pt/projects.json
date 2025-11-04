@@ -1,22 +1,32 @@
 {
-  "project1": {
-    "title": "EcoTrack",
-    "shortDescription": "Aplicativo para monitoramento de hábitos sustentáveis.",
-    "longDescription": "EcoTrack é uma plataforma web que permite aos usuários registrar e acompanhar ações sustentáveis do dia a dia, como reciclagem, economia de água e transporte ecológico. Desenvolvido com React, Vite e Firebase, o app oferece gamificação com conquistas e estatísticas visuais. Ideal para escolas e comunidades que promovem educação ambiental."
+  "section_title": "Meus Projetos",
+  "description" :"Projetos pessoais que tenho construído durante minha jornada de aprendizado.",
+  "projects": {
+    "project1": {
+      "title": "EcoTrack",
+      "shortDescription": "Aplicativo para monitoramento de hábitos sustentáveis.",
+      "longDescription": "EcoTrack é uma plataforma web que permite aos usuários registrar e acompanhar ações sustentáveis do dia a dia, como reciclagem, economia de água e transporte ecológico. Desenvolvido com React, Vite e Firebase, o app oferece gamificação com conquistas e estatísticas visuais. Ideal para escolas e comunidades que promovem educação ambiental."
+    },
+    "project2": {
+      "title": "LinguaPlay",
+      "shortDescription": "Jogo educativo para aprender idiomas brincando.",
+      "longDescription": "LinguaPlay é um jogo interativo feito com React e Phaser.js, voltado para crianças e adolescentes que estão aprendendo inglês e espanhol. O sistema de níveis e desafios usa reconhecimento de voz e animações lúdicas para tornar o aprendizado divertido. O projeto foi pensado para funcionar offline e ser usado em tablets escolares."
+    },
+    "project3": {
+      "title": "BudgetBuddy",
+      "shortDescription": "Organizador financeiro pessoal com foco em cartões de crédito.",
+      "longDescription": "BudgetBuddy é um webapp que ajuda usuários a controlar gastos com cartão de crédito, categorizando despesas e alertando sobre vencimentos. Criado com React, Zustand e TailwindCSS, o app possui integração com planilhas e exportação em PDF. Ideal para jovens adultos que estão começando a organizar suas finanças."
+    },
+    "project4": {
+      "title": "Portfólio Interativo",
+      "shortDescription": "Portfólio com efeitos visuais e suporte multilíngue.",
+      "longDescription": "Este projeto é um portfólio pessoal desenvolvido com Vite, React e i18next, com foco em acessibilidade e interatividade. Inclui uma bolinha amarela que segue o cursor, animações suaves com Framer Motion e uma Scroll Area com projetos organizados. O site é responsivo e otimizado para SEO, com deploy no Netlify."
+    }
   },
-  "project2": {
-    "title": "LinguaPlay",
-    "shortDescription": "Jogo educativo para aprender idiomas brincando.",
-    "longDescription": "LinguaPlay é um jogo interativo feito com React e Phaser.js, voltado para crianças e adolescentes que estão aprendendo inglês e espanhol. O sistema de níveis e desafios usa reconhecimento de voz e animações lúdicas para tornar o aprendizado divertido. O projeto foi pensado para funcionar offline e ser usado em tablets escolares."
-  },
-  "project3": {
-    "title": "BudgetBuddy",
-    "shortDescription": "Organizador financeiro pessoal com foco em cartões de crédito.",
-    "longDescription": "BudgetBuddy é um webapp que ajuda usuários a controlar gastos com cartão de crédito, categorizando despesas e alertando sobre vencimentos. Criado com React, Zustand e TailwindCSS, o app possui integração com planilhas e exportação em PDF. Ideal para jovens adultos que estão começando a organizar suas finanças."
-  },
-  "project4": {
-    "title": "Portfólio Interativo",
-    "shortDescription": "Portfólio com efeitos visuais e suporte multilíngue.",
-    "longDescription": "Este projeto é um portfólio pessoal desenvolvido com Vite, React e i18next, com foco em acessibilidade e interatividade. Inclui uma bolinha amarela que segue o cursor, animações suaves com Framer Motion e uma Scroll Area com projetos organizados. O site é responsivo e otimizado para SEO, com deploy no Netlify."
+  "filter": {
+    "search": {
+      "placeholder": "Digite algo...",
+      "notFound": "Me desculpe, não achei o que está procurando"
+    }
   }
 }

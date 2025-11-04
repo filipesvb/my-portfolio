@@ -13,8 +13,8 @@ const ProjectContainer = () => {
           {projects.map((p) => (
             <ProjectSingle
               key={p.id}
-              title={t(`${p.id}.title`)}
-              description={t(`${p.id}.shortDescription`)}
+              title={t(`projects.${p.id}.title`)}
+              description={t(`projects.${p.id}.shortDescription`)}
               image={p.image}
             />
           ))}

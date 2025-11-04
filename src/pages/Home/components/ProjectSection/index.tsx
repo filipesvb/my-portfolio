@@ -5,7 +5,7 @@ import ProjectContainer from './components/ProjectContainer';
 
 const ProjectSection = () => {
 
-  const { t } = useTranslation('project_section')
+  const { t } = useTranslation('projects')
   
   return(
     <Section>

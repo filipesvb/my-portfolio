@@ -1,22 +1,32 @@
 {
-  "project1": {
-    "title": "EcoTrack",
-    "shortDescription": "App for tracking sustainable habits.",
-    "longDescription": "EcoTrack is a web platform that allows users to log and monitor daily sustainable actions such as recycling, water conservation, and eco-friendly transportation. Built with React, Vite, and Firebase, the app features gamification with achievements and visual statistics. Ideal for schools and communities promoting environmental education."
+  "section_title": "My Projects",
+  "description": "Personal projects I've been building throughout my learning journey.",
+  "projects": {
+    "project1": {
+      "title": "EcoTrack",
+      "shortDescription": "App for tracking sustainable habits.",
+      "longDescription": "EcoTrack is a web platform that allows users to record and monitor everyday sustainable actions, such as recycling, water conservation, and eco-friendly transportation. Developed with React, Vite, and Firebase, the app offers gamification with achievements and visual statistics. Ideal for schools and communities that promote environmental education."
+    },
+    "project2": {
+      "title": "LinguaPlay",
+      "shortDescription": "Educational game for learning languages through play.",
+      "longDescription": "LinguaPlay is an interactive game built with React and Phaser.js, aimed at children and teenagers learning English and Spanish. The level and challenge system uses voice recognition and playful animations to make learning fun. The project was designed to work offline and be used on school tablets."
+    },
+    "project3": {
+      "title": "BudgetBuddy",
+      "shortDescription": "Personal finance organizer focused on credit cards.",
+      "longDescription": "BudgetBuddy is a web app that helps users manage credit card expenses by categorizing purchases and alerting about due dates. Built with React, Zustand, and TailwindCSS, the app integrates with spreadsheets and supports PDF export. Ideal for young adults starting to organize their finances."
+    },
+    "project4": {
+      "title": "Interactive Portfolio",
+      "shortDescription": "Portfolio with visual effects and multilingual support.",
+      "longDescription": "This project is a personal portfolio developed with Vite, React, and i18next, focusing on accessibility and interactivity. It includes a yellow ball that follows the cursor, smooth animations with Framer Motion, and a Scroll Area with organized projects. The site is responsive and SEO-optimized, deployed on Netlify."
+    }
   },
-  "project2": {
-    "title": "LinguaPlay",
-    "shortDescription": "Educational game for learning languages through play.",
-    "longDescription": "LinguaPlay is an interactive game built with React and Phaser.js, designed for children and teens learning English and Spanish. The level system and challenges use voice recognition and playful animations to make learning fun. The project is optimized for offline use and intended for school tablets."
-  },
-  "project3": {
-    "title": "BudgetBuddy",
-    "shortDescription": "Personal finance organizer focused on credit card spending.",
-    "longDescription": "BudgetBuddy is a web app that helps users manage credit card expenses by categorizing purchases and sending alerts for due dates. Developed with React, Zustand, and TailwindCSS, the app includes spreadsheet integration and PDF export. Perfect for young adults starting to organize their finances."
-  },
-  "project4": {
-    "title": "Interactive Portfolio",
-    "shortDescription": "Portfolio with visual effects and multilingual support.",
-    "longDescription": "This project is a personal portfolio built with Vite, React, and i18next, focusing on accessibility and interactivity. It features a yellow ball that follows the cursor, smooth animations with Framer Motion, and a Scroll Area showcasing organized projects. The site is responsive and SEO-optimized, deployed on Netlify."
+  "filter": {
+    "search": {
+      "placeholder": "Type something...",
+      "notFound": "Sorry, i couldn't find what you're looking for"
+    }
   }
 }

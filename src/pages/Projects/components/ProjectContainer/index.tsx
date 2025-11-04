@@ -13,13 +13,13 @@ const ProjectContainer = ({projects, query} : {projects: Project[], query: strin
     <div className="mt-6 w-full py-5 flex flex-col gap-15">
       {projects.length > 0 ? projects.map((p, i) => {
 
-        const desc = t(`${p.id}.longDescription`);
+        const desc = t(`projects.${p.id}.longDescription`);
       
         return (
             <ProjectSingle
               {...(i % 2 === 0 && {inverted: true})}
               key={p.id}
-              title={t(`${p.id}.title`)}
+              title={t(`projects.${p.id}.title`)}
               description={desc}
               query={query}
             />
@@ -27,7 +27,7 @@ const ProjectContainer = ({projects, query} : {projects: Project[], query: strin
       
       }) : 
       (
-        <div>Não achei o que está procurando... =/</div>
+        <div>{t('filter.search.notFound')}</div>
       )}
     </div>
   )

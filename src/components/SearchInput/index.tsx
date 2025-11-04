@@ -2,10 +2,11 @@ import { SearchIcon, XIcon } from "lucide-react";
 import { useState } from "react";
 
 interface SearchInputProps {
-  onSearch : (value: string) => void
+  onSearch : (value: string) => void;
+  placeholder?: string
 }
 
-const SearchInput = ({onSearch} : SearchInputProps) => {
+const SearchInput = ({onSearch, placeholder = "Digite aqui..."} : SearchInputProps) => {
 
   const [searchValue, setSearchValue ] = useState('')
 
@@ -28,7 +29,7 @@ const SearchInput = ({onSearch} : SearchInputProps) => {
         <input 
           className="w-full outline-0 border-0" 
           type="text" 
-          placeholder="Digite aqui..."
+          placeholder={placeholder}
           onChange={(e) => setSearchValue(e.target.value)}
           onKeyDown={handleKeyDown}
           value={searchValue}
