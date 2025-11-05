@@ -1,11 +1,14 @@
 import Card3D from "@/components/Card3D";
 import CardTitle from "@/components/CardTitle";
+import { type Technology } from "../../../../data/projects";
+import TechStack from "@/components/TechStack";
 
 interface ProjectSingleProps {
   title: string;
   description: string;
   inverted?: boolean;
   query?: string;
+  tags: Technology[]
 }
 
 const ProjectSingle = ({
@@ -13,7 +16,9 @@ const ProjectSingle = ({
   description,
   inverted = false,
   query,
+  tags
 }: ProjectSingleProps) => {
+  
   function getTextoDestacado(desc: string) {
     const partes = desc.split(new RegExp(`(${query})`, "gi"));
 
@@ -38,9 +43,13 @@ const ProjectSingle = ({
         <Card3D height="10" />
       </div>
       <div className="flex-3/5 flex gap-10 py-4 px-10">
-        <div className="">
+        <div className=" ">
+          
           <CardTitle className="text-[2rem] text-left">{title}</CardTitle>
           <p>{getTextoDestacado(description)}</p>
+
+          <TechStack tags={tags} />
+          
         </div>
       </div>
     </div>

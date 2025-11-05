@@ -22,6 +22,7 @@ const ProjectContainer = ({projects, query} : {projects: Project[], query: strin
               title={t(`projects.${p.id}.title`)}
               description={desc}
               query={query}
+              tags={p.tags}
             />
         )
       
