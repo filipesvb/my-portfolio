@@ -21,7 +21,7 @@ const SearchInput = ({onSearch, placeholder = "Digite aqui..."} : SearchInputPro
   }
   
   return (
-    <div className="border-1 border-white rounded-lg max-w-[300px] flex items-center relative px-1">
+    <div className="border-1 border-white rounded-lg max-w-[300px] flex items-center relative px-1 h-full">
       <label className=" flex gap-2 p-2 items-center">
         <button onClick={() => {onSearch(searchValue)}}>
           <SearchIcon />
