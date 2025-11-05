@@ -2,7 +2,10 @@
 export type Project = {
   id: string,
   image: string,
-  link: string,
+  links: {
+    github: string,
+    live: string
+  },
   tags: Technology[]
 }
 
@@ -19,7 +22,10 @@ export const projects: Project[] = [
   {
     id: 'project1',
     image: '/images/project1.png',
-    link: 'https://meuprojeto.com',
+    links: {
+      github: "",
+      live: ""
+    },
     tags: [
       {
         image: '',
@@ -42,7 +48,10 @@ export const projects: Project[] = [
   {
     id: 'project2',
     image: '/images/project2.png',
-    link: 'https://outroprojeto.com',
+    links: {
+      github: "",
+      live: ""
+    },
     tags: [
       {
         image: '',
@@ -65,7 +74,10 @@ export const projects: Project[] = [
   {
     id: 'project3',
     image: '/images/project3.png',
-    link: 'https://outropro3jeto.com',
+    links: {
+      github: "",
+      live: ""
+    },
     tags: [
       {
         image: '',
@@ -96,7 +108,10 @@ export const projects: Project[] = [
   {
     id: 'project4',
     image: '/images/project4.png',
-    link: 'https://outropro4jeto.com',
+    links: {
+      github: "",
+      live: ""
+    },
     tags: [
       {
         image: '',

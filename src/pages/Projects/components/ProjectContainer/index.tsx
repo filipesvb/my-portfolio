@@ -23,6 +23,7 @@ const ProjectContainer = ({projects, query} : {projects: Project[], query: strin
               description={desc}
               query={query}
               tags={p.tags}
+              links={p.links}
             />
         )
       

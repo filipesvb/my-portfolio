@@ -1,7 +1,7 @@
 import { useState, useRef, ReactNode } from 'react';
 import CTABall from './components/CTABall';
 
-const HoverableWithBall = ({children, className, ballText} : {children: ReactNode,className: string, ballText: string}) => {
+const HoverableWithBall = ({children, className, ballText, hideBall} : {children: ReactNode,className: string, ballText: string, hideBall?: boolean}) => {
   const [active, setActive] = useState(false);
   const [pos, setPos] = useState({x: 0, y: 0});
   const circleRef = useRef<HTMLDivElement>(null);
@@ -16,14 +16,16 @@ const HoverableWithBall = ({children, className, ballText} : {children: ReactNod
     setPos({x, y})
   }
   return (
-    <div className={`relative cursor-none ${className}`}
+    <div className={`relative ${!hideBall && 'cursor-none'} ${className}`}
       ref={circleRef}
       onMouseMove={handleCTAHover}
       onMouseEnter={() => {setActive(true)}}
       onMouseLeave={() => {setActive(false)}}
     >
       {children}
-      <CTABall active={active} x={pos.x} y={pos.y} text={ballText} />
+      {
+        !hideBall && <CTABall active={active} x={pos.x} y={pos.y} text={ballText} />
+      }
     </div>
   )
 }
