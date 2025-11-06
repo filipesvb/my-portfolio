@@ -27,6 +27,11 @@
     "search": {
       "placeholder": "Type something...",
       "notFound": "Sorry, i couldn't find what you're looking for"
+    },
+    "category": {
+      "placeholder": "Select a technology...",
+      "searchText": "Type something...",
+      "notFound": "I didn't find anything.."
     }
   }
 }

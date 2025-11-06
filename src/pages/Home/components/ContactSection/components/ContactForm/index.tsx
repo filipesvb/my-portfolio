@@ -58,7 +58,7 @@ const ContactForm = () => {
   }
   
   return (
-    <form className=" p-8  text-black flex flex-col gap-5" onSubmit={testHandleSubmit}>
+    <form className=" p-8  text-black flex flex-col gap-5" onSubmit={handleSubmit}>
       <fieldset className="grid grid-cols-2 grid-rows-2 gap-4">
         <label>
           <span className="">{t('form.name.label')}</span>

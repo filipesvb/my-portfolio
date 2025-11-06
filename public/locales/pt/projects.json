@@ -27,6 +27,11 @@
     "search": {
       "placeholder": "Digite algo...",
       "notFound": "Me desculpe, não achei o que está procurando"
+    },
+    "category": {
+      "placeholder": "Selecione uma tecnologia...",
+      "searchText": "Digite alguma coisa...",
+      "notFound": "Não encontrei nada.."
     }
   }
 }
