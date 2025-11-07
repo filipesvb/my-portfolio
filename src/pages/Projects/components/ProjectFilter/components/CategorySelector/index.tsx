@@ -47,14 +47,15 @@ const CategorySelector = ({
               <ChevronsUpDown className="opacity-50" />
             </Button>
           </PopoverTrigger>
-          <PopoverContent className="w-[200px] p-0">
-            <Command>
-              <CommandInput placeholder={text.searchText} className="h-9" />
+          <PopoverContent className="w-70 p-0 border-2 ">
+            <Command className="bg-[#171523]">
+              <CommandInput placeholder={text.searchText} className="h-9 bg-transparent text-white" />
               <CommandList>
-                <CommandEmpty>{text.notFound}</CommandEmpty>
+                <CommandEmpty className="text-center py-3 text-white" >{text.notFound}</CommandEmpty>
                 <CommandGroup>
                   {Array.from(tags).map((tag) => (
                     <CommandItem
+                      className="text-white"
                       key={tag[1].value}
                       value={tag[1].value}
                       onSelect={(currentValue) => {
@@ -79,7 +80,7 @@ const CategorySelector = ({
         { value && (
             <button 
               onClick={() => setValue('')}
-              className="cursor-pointer"
+              className="cursor-pointer pl-2"
             >
               <XIcon />
             </button>
