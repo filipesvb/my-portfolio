@@ -1,8 +1,8 @@
-import { type Technology } from "../../data/projects";
+import { TechKey, techstack, type Technology } from "../../data/techstack";
 import TechBadge from "./components/TechBadge";
 
 interface TechStackProps {
-  tags: Technology[]
+  tags: TechKey[]
 }
 
 const TechStack = ({
@@ -15,11 +15,11 @@ const TechStack = ({
         tags.map(
           (t) => {
 
-            const bg = t.style.bg;
-            const text = t.style.text;
+            const bg = techstack[t].style.bg;
+            const text = techstack[t].style.text;
               
             return (
-                <TechBadge key={t.title} title={t.title} style={{backgroundColor: bg, color: text}}/>
+                <TechBadge key={techstack[t].title} title={techstack[t].title} style={{backgroundColor: bg, color: text}}/>
             
             )  
           }

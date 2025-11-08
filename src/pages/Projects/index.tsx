@@ -3,6 +3,7 @@ import Wrapper from "@/components/Wrapper";
 import ProjectContainer from "./components/ProjectContainer";
 import ProjectFilter from "./components/ProjectFilter";
 import { projects } from "../../data/projects";
+import { TechKey, techstack } from "../../data/techstack"
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 
@@ -25,7 +26,7 @@ const Projects = () => {
       projects
         .flatMap((p) => p.tags)
         .map(t => {
-          return { label: t.title, value: t.value }
+          return { label: techstack[t].title, value: techstack[t].value }
         })
 
     const projectsMap = new Map(result.map(p => [p.value, p]));
@@ -38,7 +39,7 @@ const Projects = () => {
     const i18title = t(`projects.${p.id}.title`).toLowerCase();
     const i18description = t(`projects.${p.id}.longDescription`).toLowerCase();
     const techStack = p.tags;
-    return !!categoryValue ? ((regex.test(i18title) || regex.test(i18description)) && techStack.some(tech => tech.value === categoryValue)) :
+    return !!categoryValue ? ((regex.test(i18title) || regex.test(i18description)) && techStack.some(tech => techstack[tech].value === categoryValue)) :
       (regex.test(i18title) || regex.test(i18description));
   });
 

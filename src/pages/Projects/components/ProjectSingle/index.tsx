@@ -1,6 +1,6 @@
 import Card3D from "@/components/Card3D";
 import CardTitle from "@/components/CardTitle";
-import { type Technology } from "../../../../data/projects";
+import { type Technology } from "../../../../data/techstack";
 import TechStack from "@/components/TechStack";
 import { Magnetic } from "@/components/ui/shadcn-io/magnetic";
 import LiveLink from "./components/LiveLink";
