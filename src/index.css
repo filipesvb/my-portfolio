@@ -142,6 +142,9 @@ body {
   body {
     @apply bg-background text-foreground;
   }
+  img {
+    color: white;
+  }
 }
 
 .prose {

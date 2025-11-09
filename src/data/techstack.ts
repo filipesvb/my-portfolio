@@ -1,5 +1,15 @@
+import ReactIcon from '@/assets/icons/react.svg?react';
+import NextIcon from '@/assets/icons/nextjs.svg?react';
+import FirebaseIcon from '@/assets/icons/firebase.svg?react';
+import TailwindIcon from '@/assets/icons/tailwindcss.svg?react';
+import ViteIcon from '@/assets/icons/vite.svg?react';
+import I18NextIcon from '@/assets/icons/i18next.svg?react';
+import TypescriptIcon from '@/assets/icons/typescript.svg?react';
+import NetlifyIcon from '@/assets/icons/netlify.svg?react';
+import { ComponentType, SVGProps } from 'react';
+
 export type Technology = {
-  image: string;
+  image: ComponentType<SVGProps<SVGElement>>;
   title: string;
   value: string;
   category: string;
@@ -12,106 +22,128 @@ export type Technology = {
 export type TechKey = keyof typeof techstack;
 
 export enum tagValues {
-  REACT = "react",
-  FIREBASE = "firebase",
-  PHASERJS = "phaserjs",
-  VITE = "vite",
-  ZUSTAND = "zustand",
-  TAILWINDCSS = "tailwindcss",
-  I18NEXT = "i18next",
-  FRAMER_MOTION = "framer_motion",
-  NEXTJS = "nextjs"
+  REACT = 'react',
+  FIREBASE = 'firebase',
+  NETLIFY = 'netlify',
+  TYPESCRIPT = 'typescript',
+  PHASERJS = 'phaserjs',
+  VITE = 'vite',
+  ZUSTAND = 'zustand',
+  TAILWINDCSS = 'tailwindcss',
+  I18NEXT = 'i18next',
+  FRAMER_MOTION = 'framer_motion',
+  NEXTJS = 'nextjs',
 }
 
 export const techstack = {
   [tagValues.REACT]: {
-    image: "",
-    title: "React",
+    image: ReactIcon,
+    title: 'React',
     value: tagValues.REACT,
-    category: "frontend",
+    category: 'frontend',
     style: {
-      bg: "#61DBFB",
-      text: "#000080",
+      bg: '#61DAFB',
+      text: '#000080',
     },
   },
   [tagValues.NEXTJS]: {
-    image: "",
-      title: "NextJS",
-      value: tagValues.NEXTJS,
-      category: "fullstack",
-      style: {
-        bg: "#61DBFB",
-        text: "#000080",
-      },
+    image: NextIcon,
+    title: 'NextJS',
+    value: tagValues.NEXTJS,
+    category: 'fullstack',
+    style: {
+      bg: '#000000',
+      text: '#ffffff',
+    },
   },
   [tagValues.FIREBASE]: {
-    image: "",
-    title: "Firebase",
+    image: FirebaseIcon,
+    title: 'Firebase',
     value: tagValues.FIREBASE,
-    category: "backend",
+    category: 'backend',
     style: {
-      bg: "#FFA000",
-      text: "#000000",
+      bg: '#DD2C00',
+      text: '#000000',
     },
   },
-  [tagValues.PHASERJS]: {
-    image: "",
-    title: "Phaser.js",
-    value: tagValues.PHASERJS,
-    category: "frontend",
+  [tagValues.NETLIFY]: {
+    image: NetlifyIcon,
+    title: 'Netlify',
+    value: tagValues.NETLIFY,
+    category: 'fullstack',
     style: {
-      bg: "#8BC34A",
-      text: "#ffffff",
+      bg: '#00C7B7',
+      text: '#000000',
     },
   },
-  [tagValues.ZUSTAND]: {
-    image: "",
-    title: "Zustand",
-    value: tagValues.ZUSTAND,
-    category: "frontend",
-    style: {
-      bg: "#FF7043",
-      text: "#ffffff",
-    },
-  },
+  // [tagValues.PHASERJS]: {
+  //   image: '',
+  //   title: 'Phaser.js',
+  //   value: tagValues.PHASERJS,
+  //   category: 'frontend',
+  //   style: {
+  //     bg: '#8BC34A',
+  //     text: '#ffffff',
+  //   },
+  // },
+  // [tagValues.ZUSTAND]: {
+  //   image: '',
+  //   title: 'Zustand',
+  //   value: tagValues.ZUSTAND,
+  //   category: 'frontend',
+  //   style: {
+  //     bg: '#FF7043',
+  //     text: '#ffffff',
+  //   },
+  // },
   [tagValues.TAILWINDCSS]: {
-    image: "",
-    title: "Tailwindcss",
+    image: TailwindIcon,
+    title: 'Tailwindcss',
     value: tagValues.TAILWINDCSS,
-    category: "frontend",
+    category: 'frontend',
     style: {
-      bg: "#38BDF8",
-      text: "#1E293B",
+      bg: '#38BDF8',
+      text: '#1E293B',
     },
   },
   [tagValues.VITE]: {
-    image: "",
-    title: "Vite",
+    image: ViteIcon,
+    title: 'Vite',
     value: tagValues.VITE,
-    category: "frontend",
+    category: 'frontend',
     style: {
-      bg: "#646CFF",
-      text: "#ffffff",
+      bg: '#646CFF',
+      text: '#ffffff',
     },
   },
   [tagValues.I18NEXT]: {
-    image: "",
-    title: "i18next",
+    image: I18NextIcon,
+    title: 'i18next',
     value: tagValues.I18NEXT,
-    category: "fullstack",
+    category: 'fullstack',
     style: {
-      bg: "#E10098",
-      text: "#ffffff",
+      bg: '#26A69A',
+      text: '#ffffff',
     },
   },
-  [tagValues.FRAMER_MOTION]: {
-    image: "",
-    title: "Framer Motion",
-    value: tagValues.FRAMER_MOTION,
-    category: "frontend",
+  [tagValues.TYPESCRIPT]: {
+    image: TypescriptIcon,
+    title: 'Typescript',
+    value: tagValues.TYPESCRIPT,
+    category: 'fullstack',
     style: {
-      bg: "#0055FF",
-      text: "#ffffff",
+      bg: '#3178C6',
+      text: '#ffffff',
     },
   },
+  // [tagValues.FRAMER_MOTION]: {
+  //   image: '',
+  //   title: 'Framer Motion',
+  //   value: tagValues.FRAMER_MOTION,
+  //   category: 'frontend',
+  //   style: {
+  //     bg: '#0055FF',
+  //     text: '#ffffff',
+  //   },
+  // },
 };
