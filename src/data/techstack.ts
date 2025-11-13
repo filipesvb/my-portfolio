@@ -35,7 +35,7 @@ export enum tagValues {
   NEXTJS = 'nextjs',
 }
 
-export const techstack = {
+export const techstack: Partial<Record<tagValues, Technology>> = {
   [tagValues.REACT]: {
     image: ReactIcon,
     title: 'React',
@@ -45,7 +45,7 @@ export const techstack = {
       bg: '#61DAFB',
       text: '#000080',
     },
-  },
+  } as Technology,
   [tagValues.NEXTJS]: {
     image: NextIcon,
     title: 'NextJS',
@@ -55,7 +55,7 @@ export const techstack = {
       bg: '#000000',
       text: '#ffffff',
     },
-  },
+  } as Technology,
   [tagValues.FIREBASE]: {
     image: FirebaseIcon,
     title: 'Firebase',
@@ -65,7 +65,7 @@ export const techstack = {
       bg: '#DD2C00',
       text: '#000000',
     },
-  },
+  } as Technology,
   [tagValues.NETLIFY]: {
     image: NetlifyIcon,
     title: 'Netlify',
@@ -75,7 +75,7 @@ export const techstack = {
       bg: '#00C7B7',
       text: '#000000',
     },
-  },
+  } as Technology,
   // [tagValues.PHASERJS]: {
   //   image: '',
   //   title: 'Phaser.js',
@@ -85,7 +85,7 @@ export const techstack = {
   //     bg: '#8BC34A',
   //     text: '#ffffff',
   //   },
-  // },
+  // } as Technology,
   // [tagValues.ZUSTAND]: {
   //   image: '',
   //   title: 'Zustand',
@@ -95,7 +95,7 @@ export const techstack = {
   //     bg: '#FF7043',
   //     text: '#ffffff',
   //   },
-  // },
+  // } as Technology,
   [tagValues.TAILWINDCSS]: {
     image: TailwindIcon,
     title: 'Tailwindcss',
@@ -105,7 +105,7 @@ export const techstack = {
       bg: '#38BDF8',
       text: '#1E293B',
     },
-  },
+  } as Technology,
   [tagValues.VITE]: {
     image: ViteIcon,
     title: 'Vite',
@@ -115,7 +115,7 @@ export const techstack = {
       bg: '#646CFF',
       text: '#ffffff',
     },
-  },
+  } as Technology,
   [tagValues.I18NEXT]: {
     image: I18NextIcon,
     title: 'i18next',
@@ -125,7 +125,7 @@ export const techstack = {
       bg: '#26A69A',
       text: '#ffffff',
     },
-  },
+  } as Technology,
   [tagValues.TYPESCRIPT]: {
     image: TypescriptIcon,
     title: 'Typescript',
@@ -135,7 +135,7 @@ export const techstack = {
       bg: '#3178C6',
       text: '#ffffff',
     },
-  },
+  } as Technology,
   // [tagValues.FRAMER_MOTION]: {
   //   image: '',
   //   title: 'Framer Motion',
@@ -145,5 +145,5 @@ export const techstack = {
   //     bg: '#0055FF',
   //     text: '#ffffff',
   //   },
-  // },
+  // } as Technology,
 };
