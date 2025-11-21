@@ -27,6 +27,7 @@
     "locize": "^4.0.14",
     "locize-lastused": "^4.0.2",
     "lucide-react": "^0.548.0",
+    "motion": "^12.23.24",
     "nodemailer": "^7.0.10",
     "path": "^0.12.7",
     "react": "^19.1.1",
