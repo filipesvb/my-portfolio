@@ -1,16 +1,16 @@
-import SectionTitle from "@/components/SectionTitle";
-import Wrapper from "@/components/Wrapper";
-import ProjectContainer from "./components/ProjectContainer";
-import ProjectFilter from "./components/ProjectFilter";
-import { projects } from "../../data/projects";
-import { TechKey, techstack } from "../../data/techstack"
-import { useEffect, useState } from "react";
-import { useTranslation } from "react-i18next";
+import SectionTitle from '@/components/SectionTitle';
+import Wrapper from '@/components/Wrapper';
+import ProjectContainer from './components/ProjectContainer';
+import ProjectFilter from './components/ProjectFilter';
+import { projects } from '../../data/projects';
+import { TechKey, techstack } from '../../data/techstack';
+import { useEffect, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
 const Projects = () => {
-  const { t } = useTranslation("projects");
+  const { t } = useTranslation('projects');
 
-  const [searchValue, setSearchValue] = useState("");
+  const [searchValue, setSearchValue] = useState('');
   const [categoryValue, setCategoryValue] = useState('');
 
   function handleSearch(value: string) {
@@ -22,14 +22,16 @@ const Projects = () => {
   }
 
   function getAllTags() {
-    const result = 
-      projects
-        .flatMap((p) => p.tags)
-        .map(t => {
-          return { label: techstack[t].title, value: techstack[t].value }
-        })
+    const result = projects
+      .flatMap((p) => p.tags)
+      .map((t) => {
+        return {
+          label: techstack[t] ? techstack[t].title : 'nao tem',
+          value: techstack[t] ? techstack[t].value : 'nao tem',
+        };
+      });
 
-    const projectsMap = new Map(result.map(p => [p.value, p]));
+    const projectsMap = new Map(result.map((p) => [p.value, p]));
     return projectsMap;
   }
 
@@ -39,16 +41,23 @@ const Projects = () => {
     const i18title = t(`projects.${p.id}.title`).toLowerCase();
     const i18description = t(`projects.${p.id}.longDescription`).toLowerCase();
     const techStack = p.tags;
-    return !!categoryValue ? ((regex.test(i18title) || regex.test(i18description)) && techStack.some(tech => techstack[tech].value === categoryValue)) :
-      (regex.test(i18title) || regex.test(i18description));
+    return !!categoryValue
+      ? (regex.test(i18title) || regex.test(i18description)) &&
+          techStack.some((tech) => techstack[tech].value === categoryValue)
+      : regex.test(i18title) || regex.test(i18description);
   });
 
   return (
     <div className="w-full h-full font-azeret-mono">
       <Wrapper>
-        <SectionTitle>{t("section_title")}</SectionTitle>
-        <p className="max-w-100 whitespace-wrap">{t("description")}</p>
-        <ProjectFilter onSearch={handleSearch} searchValue={searchValue} onSelectCategory={handleSelectCategory} tags={getAllTags()} />
+        <SectionTitle>{t('section_title')}</SectionTitle>
+        <p className="max-w-100 whitespace-wrap">{t('description')}</p>
+        <ProjectFilter
+          onSearch={handleSearch}
+          searchValue={searchValue}
+          onSelectCategory={handleSelectCategory}
+          tags={getAllTags()}
+        />
         <ProjectContainer projects={filteredProjects} query={searchValue} />
       </Wrapper>
     </div>
