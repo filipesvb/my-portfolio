@@ -28,7 +28,7 @@ export const projects: Project[] = [
       github: "",
       live: "",
     },
-    tags: [tagValues.REACT, tagValues.PHASERJS],
+    tags: [tagValues.REACT, tagValues.NETLIFY],
   },
   {
     id: "project3",
@@ -37,7 +37,7 @@ export const projects: Project[] = [
       github: "",
       live: "",
     },
-    tags: [tagValues.REACT, tagValues.ZUSTAND, tagValues.TAILWINDCSS],
+    tags: [tagValues.REACT, tagValues.NEXTJS, tagValues.TAILWINDCSS],
   },
   {
     id: "project4",
@@ -46,6 +46,6 @@ export const projects: Project[] = [
       github: "",
       live: "",
     },
-    tags: [tagValues.VITE, tagValues.I18NEXT, tagValues.FRAMER_MOTION],
+    tags: [tagValues.VITE, tagValues.I18NEXT, tagValues.TAILWINDCSS],
   },
 ];

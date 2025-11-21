@@ -1,17 +1,17 @@
-import SectionTitle from '@/components/SectionTitle';
-import Wrapper from '@/components/Wrapper';
-import ProjectContainer from './components/ProjectContainer';
-import ProjectFilter from './components/ProjectFilter';
-import { projects } from '../../data/projects';
-import { TechKey, techstack } from '../../data/techstack';
-import { useEffect, useState } from 'react';
-import { useTranslation } from 'react-i18next';
+import SectionTitle from "@/components/SectionTitle";
+import Wrapper from "@/components/Wrapper";
+import ProjectContainer from "./components/ProjectContainer";
+import ProjectFilter from "./components/ProjectFilter";
+import { projects } from "../../data/projects";
+import { TechKey, techstack } from "../../data/techstack";
+import { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 
 const Projects = () => {
-  const { t } = useTranslation('projects');
+  const { t } = useTranslation("projects");
 
-  const [searchValue, setSearchValue] = useState('');
-  const [categoryValue, setCategoryValue] = useState('');
+  const [searchValue, setSearchValue] = useState("");
+  const [categoryValue, setCategoryValue] = useState("");
 
   function handleSearch(value: string) {
     setSearchValue(value);
@@ -26,8 +26,8 @@ const Projects = () => {
       .flatMap((p) => p.tags)
       .map((t) => {
         return {
-          label: techstack[t] ? techstack[t].title : 'nao tem',
-          value: techstack[t] ? techstack[t].value : 'nao tem',
+          label: techstack[t] ? techstack[t].title : "nao tem",
+          value: techstack[t] ? techstack[t].value : "nao tem",
         };
       });
 
@@ -43,15 +43,19 @@ const Projects = () => {
     const techStack = p.tags;
     return !!categoryValue
       ? (regex.test(i18title) || regex.test(i18description)) &&
-          techStack.some((tech) => techstack[tech].value === categoryValue)
+          techStack.some((tech) =>
+            techstack[tech] ? techstack[tech].value === categoryValue : false,
+          )
       : regex.test(i18title) || regex.test(i18description);
   });
 
   return (
     <div className="w-full h-full font-azeret-mono">
       <Wrapper>
-        <SectionTitle>{t('section_title')}</SectionTitle>
-        <p className="max-w-100 whitespace-wrap">{t('description')}</p>
+        <SectionTitle>{t("section_title")}</SectionTitle>
+        <p className="max-w-100 whitespace-wrap text-md max-w-[300px]">
+          {t("description")}
+        </p>
         <ProjectFilter
           onSearch={handleSearch}
           searchValue={searchValue}
