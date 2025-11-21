@@ -20,7 +20,7 @@ export enum tagValues {
   TAILWINDCSS = "tailwindcss",
   I18NEXT = "i18next",
   FRAMER_MOTION = "framer_motion",
-  NEXTJS = "nextjs"
+  NEXTJS = "nextjs",
 }
 
 export const techstack = {
@@ -36,13 +36,13 @@ export const techstack = {
   },
   [tagValues.NEXTJS]: {
     image: "",
-      title: "NextJS",
-      value: tagValues.NEXTJS,
-      category: "fullstack",
-      style: {
-        bg: "#61DBFB",
-        text: "#000080",
-      },
+    title: "NextJS",
+    value: tagValues.NEXTJS,
+    category: "fullstack",
+    style: {
+      bg: "#61DBFB",
+      text: "#000080",
+    },
   },
   [tagValues.FIREBASE]: {
     image: "",
