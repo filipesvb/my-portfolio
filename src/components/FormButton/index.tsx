@@ -1,8 +1,8 @@
-import { ReactNode } from 'react';
+import { ReactNode } from "react";
 
 const FormButton = ({ children }: { children: ReactNode }) => {
   return (
-    <button className="border border-black rounded-lg flex bg-black text-white p-4 px-20 justify-self-start cursor-pointer">
+    <button className="flex cursor-pointer justify-self-start rounded-lg border border-none bg-[#123361] p-4 px-20 text-white dark:border-black dark:text-white">
       {children}
     </button>
   );

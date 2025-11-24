@@ -9,7 +9,7 @@ import ContactSection from "./components/ContactSection";
 function App() {
   return (
     <>
-      <div className="w-full h-full flex flex-col justify-start font-azeret-mono ">
+      <div className="font-azeret-mono flex h-full w-full flex-col justify-start">
         <Wrapper>
           <div className="mt-10">
             <Hero />

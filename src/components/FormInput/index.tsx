@@ -1,8 +1,8 @@
-import { ReactNode } from 'react';
+import { ReactNode } from "react";
 
 const FormInput = ({
   children,
-  tipo = 'text',
+  tipo = "text",
   className,
   placeholder,
   onChange,
@@ -19,7 +19,7 @@ const FormInput = ({
     <input
       autoComplete="invalid"
       type={tipo}
-      className={`w-full h-full border-0 outline-0 ${className}`}
+      className={`h-full w-full border-0 text-white outline-0 dark:text-black ${className}`}
       placeholder={placeholder}
       {...(onChange && { onChange: (e) => onChange(e) })}
       value={value}

@@ -1,12 +1,14 @@
+import LabelWrapper from "../LabelWrapper";
+
 const TextAreaWrapper = ({
   label,
   rows,
   cols,
   placeholder,
   value,
-  onUpdate
+  onUpdate,
 }: {
-  label: string,
+  label: string;
   rows: number;
   cols?: number;
   placeholder?: string;
@@ -15,12 +17,12 @@ const TextAreaWrapper = ({
 }) => {
   return (
     <label>
-      <span>{label}</span>
+      <LabelWrapper>{label}</LabelWrapper>
       <textarea
         placeholder={placeholder}
         rows={rows}
         cols={cols}
-        className="w-full rounded-lg border-2 border-black px-2 py-4"
+        className="w-full rounded-lg border-2 border-white px-2 py-4 text-white dark:border-black dark:text-black"
         value={value}
         onChange={(e) => onUpdate(e.target.value)}
       ></textarea>

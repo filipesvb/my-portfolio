@@ -1,71 +1,72 @@
-import FormButton from '@/components/FormButton';
-import InputWrapper from '@/components/InputWrapper';
-import TextAreaWrapper from '@/components/TextAreaWrapper';
-import { Magnetic } from '@/components/ui/shadcn-io/magnetic';
-import { useState } from 'react';
-import FormInput from '@/components/FormInput';
-import { useTranslation } from 'react-i18next';
+import FormButton from "@/components/FormButton";
+import InputWrapper from "@/components/InputWrapper";
+import TextAreaWrapper from "@/components/TextAreaWrapper";
+import { Magnetic } from "@/components/ui/shadcn-io/magnetic";
+import { useState } from "react";
+import FormInput from "@/components/FormInput";
+import { useTranslation } from "react-i18next";
+import LabelWrapper from "@/components/LabelWrapper";
 
-const formInputStyle = 'py-4 px-2';
+const formInputStyle = "py-4 px-2";
 
 const ContactForm = () => {
-  const { t } = useTranslation('contact');
-  const [name, setName] = useState(t('form.name.placeholder'));
-  const [message, setMessage] = useState('');
-  const [email, setEmail] = useState('');
-  const [phone, setPhone] = useState('');
-  const [isTextAreaUpdated, setIsTextAreaUpdated] = useState(false)
-  const [subject, setSubject] = useState('default');
-
+  const { t } = useTranslation("contact");
+  const [name, setName] = useState(t("form.name.placeholder"));
+  const [message, setMessage] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [isTextAreaUpdated, setIsTextAreaUpdated] = useState(false);
+  const [subject, setSubject] = useState("default");
 
   function getTranslatedMessagePlaceholder() {
-
-    switch(subject) {
-      case 'servico':
-        return t('form.mensagem.placeholder.servico', {name})
-      case 'entrevista':
-        return t('form.mensagem.placeholder.entrevista', {name})
+    switch (subject) {
+      case "servico":
+        return t("form.mensagem.placeholder.servico", { name });
+      case "entrevista":
+        return t("form.mensagem.placeholder.entrevista", { name });
       default:
-        return t('form.mensagem.placeholder.default')
+        return t("form.mensagem.placeholder.default");
     }
-    
   }
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const res = await fetch('/.netlify/functions/sendEmail', {
-      method: 'POST',
+    const res = await fetch("/.netlify/functions/sendEmail", {
+      method: "POST",
       body: JSON.stringify({
         name,
         email,
         message,
-        subject
+        subject,
       }),
     });
 
     const data = await res.json();
     if (data.success) {
-      alert('Email enviado com sucesso!');
+      alert("Email enviado com sucesso!");
     } else {
-      alert('Erro ao enviar email: ' + data.error);
+      alert("Erro ao enviar email: " + data.error);
     }
   };
 
   const testHandleSubmit = async (e) => {
     e.preventDefault();
-    console.log('enviado')
-  }
-  
+    console.log("enviado");
+  };
+
   return (
-    <form className=" p-8  text-black flex flex-col gap-5" onSubmit={handleSubmit}>
+    <form
+      className="flex flex-col gap-5 p-8 text-black"
+      onSubmit={handleSubmit}
+    >
       <fieldset className="grid grid-cols-2 grid-rows-2 gap-4">
-        <label>
-          <span className="">{t('form.name.label')}</span>
+        <label className="">
+          <LabelWrapper>{t("form.name.label")}</LabelWrapper>
           <InputWrapper>
             <FormInput
               className={formInputStyle}
-              placeholder={t('form.name.placeholder')}
+              placeholder={t("form.name.placeholder")}
               tipo="text"
               onChange={(e) => {
                 setName(e.target.value);
@@ -75,11 +76,11 @@ const ContactForm = () => {
           </InputWrapper>
         </label>
         <label>
-          <span>{t('form.email.label')}</span>
+          <LabelWrapper>{t("form.email.label")}</LabelWrapper>
           <InputWrapper>
             <FormInput
               tipo="email"
-              placeholder={t('form.email.placeholder')}
+              placeholder={t("form.email.placeholder")}
               className={formInputStyle}
               onChange={(e) => {
                 setEmail(e.target.value);
@@ -89,11 +90,11 @@ const ContactForm = () => {
           </InputWrapper>
         </label>
         <label>
-          <span>{t('form.telefone.label')}</span>
+          <LabelWrapper>{t("form.telefone.label")}</LabelWrapper>
           <InputWrapper>
             <FormInput
               tipo="tel"
-              placeholder={t('form.telefone.placeholder')}
+              placeholder={t("form.telefone.placeholder")}
               className={formInputStyle}
               onChange={(e) => {
                 setPhone(e.target.value);
@@ -103,31 +104,44 @@ const ContactForm = () => {
           </InputWrapper>
         </label>
         <label>
-          <span>{t('form.assunto.label')}</span>
+          <LabelWrapper>{t("form.assunto.label")}</LabelWrapper>
           <InputWrapper>
             <select
-              className={`w-full h-full border-0 outline-0 ${formInputStyle}`}
-              onChange={(e) => {setSubject(e.target.value)}}
+              className={`text-red-white h-full w-full border-0 outline-0 dark:text-black ${formInputStyle}`}
+              onChange={(e) => {
+                setSubject(e.target.value);
+              }}
               required
             >
-              <option value="default" selected disabled>
-                {t('form.assunto.placeholder')}
+              <option
+                className="text-white dark:text-black"
+                value="default"
+                selected
+                disabled
+              >
+                {t("form.assunto.placeholder")}
               </option>
-              <option value="servico">{t('form.assunto.options.servico')}</option>
-              <option value="entrevista">{t('form.assunto.options.entrevista')}</option>
+              <option value="servico" className="text-black">
+                {t("form.assunto.options.servico")}
+              </option>
+              <option value="entrevista" className="text-black">
+                {t("form.assunto.options.entrevista")}
+              </option>
             </select>
           </InputWrapper>
         </label>
       </fieldset>
       <fieldset>
         <TextAreaWrapper
-          label={t('form.mensagem.label')}
+          label={t("form.mensagem.label")}
           rows={3}
           onUpdate={(value) => {
             setMessage(value);
             setIsTextAreaUpdated(true);
           }}
-          {...(!isTextAreaUpdated ? {value: getTranslatedMessagePlaceholder()} : {value: message})}
+          {...(!isTextAreaUpdated
+            ? { value: getTranslatedMessagePlaceholder() }
+            : { value: message })}
         />
       </fieldset>
       <fieldset>

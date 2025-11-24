@@ -14,10 +14,12 @@ import {
 } from "../ui/sheet";
 import { Button } from "../ui/button";
 import { MenuIcon } from "lucide-react";
+import { useTheme } from "@/contexts/ThemeContext";
 
 const Header = () => {
   const { i18n } = useTranslation();
   const [language, setLanguage] = useState(i18n.language);
+  const { theme, toggleTheme } = useTheme();
 
   const changeLanguage = (language) => {
     i18n.changeLanguage(language);
@@ -25,11 +27,11 @@ const Header = () => {
   };
 
   return (
-    <header className="w-full  py-5 font-inter">
+    <header className="font-inter w-full py-5">
       <Wrapper>
-        <div className="flex justify-between hidden md:block">
+        <div className="flex hidden justify-between md:block">
           <Menu variant={"md"} />
-          <div className=" flex gap-4">
+          <div className="flex gap-4">
             <SocialList />
             <LanguageSelect
               selectedOption={language}
@@ -57,13 +59,16 @@ const Header = () => {
                 <SheetTitle>
                   <span>Menu</span>
                 </SheetTitle>
+                <Button variant={"outline"} onClick={toggleTheme}>
+                  {theme === "light" ? "☀️" : "🌙"}
+                </Button>
                 <LanguageSelect
                   selectedOption={language}
                   selectOption={changeLanguage}
                 />
               </SheetHeader>
-              <div className="flex flex-col gap-4  justify-between  h-full">
-                <Menu  />
+              <div className="flex h-full flex-col justify-between gap-4">
+                <Menu />
                 <div className="w-full">
                   <SocialList />
                 </div>

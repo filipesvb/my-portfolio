@@ -1,4 +1,4 @@
-import { ReactNode } from 'react';
+import { ReactNode } from "react";
 
 const InputWrapper = ({
   children,
@@ -8,7 +8,9 @@ const InputWrapper = ({
   className?: string;
 }) => {
   return (
-    <div className={`border-2 border-black rounded-lg ${className}`}>
+    <div
+      className={`rounded-lg border-2 border-white dark:border-black ${className}`}
+    >
       {children}
     </div>
   );

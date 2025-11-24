@@ -1,8 +1,9 @@
-import type { Config } from 'tailwindcss';
-import typography from '@tailwindcss/typography';
+import type { Config } from "tailwindcss";
+import typography from "@tailwindcss/typography";
 
 const config: Config = {
-  content: ['./src/**/*.{js,jsx,ts,tsx,html}'],
+  darkMode: "class",
+  content: ["./src/**/*.{js,jsx,ts,tsx,html}"],
 
   theme: {},
   plugins: [typography],
