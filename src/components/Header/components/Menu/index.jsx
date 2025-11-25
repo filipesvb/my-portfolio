@@ -27,7 +27,7 @@ const menuOptions = [
   },
 ];
 
-const Menu = ({ variant }) => {
+const Menu = ({ variant = "" }) => {
   const { t } = useTranslation("header");
 
   const menuClassName = {

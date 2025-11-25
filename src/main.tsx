@@ -11,6 +11,7 @@ import Projects from "./pages/Projects/index.js";
 import Footer from "./components/Footer/index.js";
 import About from "./pages/About/index.js";
 import { ThemeProvider } from "./contexts/ThemeContext.js";
+import ScrollAwareMenuButton from "./components/ScrollAwareMenuButton.js";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
@@ -25,6 +26,7 @@ createRoot(document.getElementById("root")!).render(
           </Routes>
           <Footer />
         </div>
+        <ScrollAwareMenuButton />
       </BrowserRouter>
     </ThemeProvider>
   </StrictMode>,
