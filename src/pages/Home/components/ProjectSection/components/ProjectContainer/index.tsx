@@ -8,8 +8,8 @@ const ProjectContainer = () => {
 
   return (
     <div className="">
-      <ScrollArea className="w-full rounded-md relative">
-        <div className="flex flex-col w-full space-x-12 items-center px-4 relative  md:items-stretch md:flex-row ">
+      <ScrollArea className="w-full relative ">
+        <div className="flex flex-col w-full md:space-x-12 space-y-12 items-center px-4 relative  md:items-stretch md:flex-row ">
           {projects.map((p) => (
             <ProjectSingle
               key={p.id}

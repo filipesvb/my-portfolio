@@ -11,7 +11,7 @@ function App() {
     <>
       <div className="font-azeret-mono flex h-full w-full flex-col justify-start">
         <Wrapper>
-          <div className="mt-10">
+          <div className="mt-10 space-y-10">
             <Hero />
             <ServiceSection />
             <ProjectSection />

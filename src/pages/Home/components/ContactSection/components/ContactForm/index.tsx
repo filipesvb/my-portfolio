@@ -60,7 +60,7 @@ const ContactForm = () => {
       className="flex flex-col gap-5 p-8 text-black"
       onSubmit={handleSubmit}
     >
-      <fieldset className="grid grid-cols-2 grid-rows-2 gap-4">
+      <fieldset className="md:grid md:grid-cols-2 md:grid-rows-2 flex flex-col gap-4">
         <label className="">
           <LabelWrapper>{t("form.name.label")}</LabelWrapper>
           <InputWrapper>
@@ -145,7 +145,7 @@ const ContactForm = () => {
         />
       </fieldset>
       <fieldset>
-        <Magnetic>
+        <Magnetic className="w-full ">
           <FormButton>Enviar</FormButton>
         </Magnetic>
       </fieldset>

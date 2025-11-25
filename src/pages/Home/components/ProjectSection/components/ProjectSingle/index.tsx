@@ -2,6 +2,7 @@ import HoverableWithBall from "@/components/HoverableWithBall";
 import CardTitle from "../../../../../../components/CardTitle";
 
 import Card3D from "@/components/Card3D";
+import useMediaQuery from "@/hooks/useMediaQuery";
 
 type Project = {
   title: string;
@@ -10,9 +11,12 @@ type Project = {
 };
 
 const ProjectSingle = ({ title, description, image }: Project) => {
+
+  const isSmallScreen = useMediaQuery();
+  
   return (
-    <div className=" ">
-      <Card3D hideBall={false} />
+    <div className="w-full ">
+      <Card3D hideBall={isSmallScreen} />
       <CardTitle>{title}</CardTitle>
       <p className="whitespace-wrap w-full">{description}</p>
     </div>
