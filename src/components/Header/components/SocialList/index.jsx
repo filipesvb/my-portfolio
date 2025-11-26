@@ -1,5 +1,5 @@
-import Linkedin from "../../../icons/LinkedinIcon";
-import Github from "../../../icons/GithubIcon";
+import  Linkedin from "@/assets/icons/socials/linkedin.svg?react";
+import Github from "@/assets/icons/socials/github.svg?react";
 import { Link } from "react-router";
 
 const socials = [
@@ -24,10 +24,12 @@ const SocialList = () => {
           <Link
             target="_blank"
             to={s.to}
-            className="group px-3 flex flex-row gap-2 items-center w-full  py-5 border-t hover:bg-white transition-colors duration-300"
+            className="group px-3 flex flex-row items-center w-full  py-5 border-t border-muted-foreground hover:bg-white transition-colors duration-300 text-foreground"
           >
-            <Icon />
-            <span>{s.title}</span>
+            <div className="flex-2/10">
+              <Icon className="fill-foreground w-12  h-12"/>
+            </div>
+            <span className="text-foreground font-medium text-md tracking-wide flex-8/10">{s.title}</span>
           </Link>
         );
       })}

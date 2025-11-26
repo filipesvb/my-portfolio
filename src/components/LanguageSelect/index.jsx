@@ -22,28 +22,30 @@ const LanguageSelect = ({ selectedOption, selectOption }) => {
         <DropdownMenuTrigger asChild>
           <Button
             variant={"outline"}
-            className=" focus:text-black cursor-pointer group"
+            className=" focus:text-black cursor-pointer group border-foreground"
           >
             <div className="flex items-center gap-2">
-              <span className="group-hover:text-background">
+              <span className="group-hover:text-background text-foreground">
                 {selectedOption.toUpperCase()}
               </span>
-              <ChevronDown className="group-hover:stroke-black" />
+              <ChevronDown className="group-hover:stroke-black stroke-foreground" />
             </div>
           </Button>
         </DropdownMenuTrigger>
         <DropdownMenuContent
-          className="border rounded-xl overflow-hidden p-0 bg-background"
+          className="border-foreground rounded-xl overflow-hidden p-0 bg-background"
           side="bottom"
         >
-          <ul className="flex-col flex items-center ">
-            {supportedLngs.map((language) => (
+          <ul className="flex-col flex items-center">
+            {supportedLngs.map((language, i) => (
+            <>
+            
               <DropdownMenuItem
                 asChild
                 className="hover:bg-transparent hover:text-inherit focus:bg-transparent focus:text-inherit rounded-none"
               >
                 <li
-                  className={`select-none text-center text-white w-full  ${styles.selectable} `}
+                  className={`select-none text-center  w-full flex-col  ${styles.selectable} `}
                 >
                   <button
                     className="cursor-pointer py-3 px-4 w-full"
@@ -51,10 +53,18 @@ const LanguageSelect = ({ selectedOption, selectOption }) => {
                       handleSelectOption(language);
                     }}
                   >
-                    <span>{language.toUpperCase()}</span>
+                    <span className="text-foreground">{language.toUpperCase()}</span>
                   </button>
+                  
                 </li>
               </DropdownMenuItem>
+              {i !== supportedLngs.length - 1 && (
+                <div className=" text-red-400 w-full flex justify-center">
+                  <hr className="text-red-300  border-t-muted-foreground w-9/10 " />
+                </div>
+              )}
+          </>
+          
             ))}
           </ul>
         </DropdownMenuContent>

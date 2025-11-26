@@ -20,7 +20,7 @@ const MenuButton = ({language, changeLanguage} : {language: string; changeLangua
   const { theme, toggleTheme } = useTheme();
   
   return (
-    <Sheet>
+    <Sheet >
       <SheetTrigger asChild>
         <Button
           size={"icon-lg"}
@@ -36,22 +36,25 @@ const MenuButton = ({language, changeLanguage} : {language: string; changeLangua
       >
         <SheetHeader className="flex flex-row justify-between">
           <SheetTitle>
-            <span>Menu</span>
+            <span className="text-foreground">Menu</span>
           </SheetTitle>
-          <Button variant={"outline"} onClick={toggleTheme}>
+          <Button variant={"outline"} onClick={toggleTheme} className="border-foreground">
             {theme === "light" ? "☀️" : "🌙"}
           </Button>
           <LanguageSelect
+            
             selectedOption={language}
             selectOption={changeLanguage}
           />
         </SheetHeader>
+        
         <div className="flex h-full flex-col justify-between gap-4">
           <Menu  />
           <div className="w-full">
             <SocialList />
           </div>
         </div>
+        
       </SheetContent>
     </Sheet>
   )

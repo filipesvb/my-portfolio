@@ -50,9 +50,9 @@ const MobileMenu = ({ t }) => {
       {menuOptions.map((opt, i) => {
         const Icon = opt.icon;
         const content = (
-          <Link to={`/${opt.to}`}>
-            <Icon className="group-hover:stroke-background transition-colors duration-300" />
-            <span className="group-hover:text-background transition-colors duration-300">
+          <Link to={`/${opt.to}`} className="bg-muted-background">
+            <Icon className="group-hover:stroke-background transition-colors duration-300 stroke-foreground" />
+            <span className="group-hover:text-background transition-colors duration-300 text-foreground">
               {t(`${opt.value}`)}
             </span>
           </Link>
@@ -63,9 +63,11 @@ const MobileMenu = ({ t }) => {
             variant={"outline"}
             asChild
             key={`${opt.value}`}
-            className="flex justify-start group"
+            className="flex justify-start group border-muted-foreground text-foreground"
           >
-            {<SheetClose asChild>{content}</SheetClose>}
+            {<SheetClose asChild>
+              {content}
+            </SheetClose>}
           </Button>
         );
       })}
