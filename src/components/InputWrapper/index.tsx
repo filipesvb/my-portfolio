@@ -9,7 +9,7 @@ const InputWrapper = ({
 }) => {
   return (
     <div
-      className={`rounded-lg border-2 border-white dark:border-black ${className}`}
+      className={`rounded-lg border-2 border-black dark:border-black ${className}`}
     >
       {children}
     </div>

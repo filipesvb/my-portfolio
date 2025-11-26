@@ -8,9 +8,10 @@ export default function AboutMe({ compact = false }) {
         i18nKey={compact ? 'aboutMe:presentation.compact' : 'aboutMe:presentation.full'}
         ns="aboutMe"
         components={{
-          p: <p />,
+          p: <p className='text-foreground' />,
           strong: <strong className="font-bold text-blue-600" />,
         }}
+        
       />
     </section>
   );

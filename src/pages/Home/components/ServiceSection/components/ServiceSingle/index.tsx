@@ -8,9 +8,9 @@ interface ServiceSingleProps {
 const ServiceSingle = ({title, description}: ServiceSingleProps) => {
   return (
     <div className="flex-1">
-      <div className="border-1 border-dotted pt-[100%]"></div>
-      <CardTitle>{title}</CardTitle>
-      <p>{description}</p>
+      <div className="border-1 border-dotted pt-[100%] border-muted-foreground"></div>
+      <CardTitle className="text-foreground">{title}</CardTitle>
+      <p className="text-muted-foreground">{description}</p>
     </div>
   )
 }

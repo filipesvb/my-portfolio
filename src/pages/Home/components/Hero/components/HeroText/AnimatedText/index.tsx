@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next";
 const AnimatedText = ({ textArr }: { textArr: string[] }) => {
   const { t, i18n } = useTranslation();
   return (
-    <div className="pl-4 border-1 py-4">
+    <div className="pl-4 border-1 py-4 border-muted-foreground">
       <TypingText
         key={i18n.language}
         text={textArr}
@@ -12,7 +12,7 @@ const AnimatedText = ({ textArr }: { textArr: string[] }) => {
         pauseDuration={1500}
         showCursor={true}
         cursorCharacter="|"
-        className="text-xl font-bold"
+        className="text-xl font-bold text-foreground"
         variableSpeed={{ min: 50, max: 120 }}
       />
     </div>

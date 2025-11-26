@@ -22,7 +22,7 @@ const TextAreaWrapper = ({
         placeholder={placeholder}
         rows={rows}
         cols={cols}
-        className="w-full rounded-lg border-2 border-white px-2 py-4 text-white dark:border-black dark:text-black"
+        className="w-full rounded-lg border-2 border-black px-2 py-4 text-black dark:border-black dark:text-black"
         value={value}
         onChange={(e) => onUpdate(e.target.value)}
       ></textarea>

@@ -17,8 +17,8 @@ const ProjectSingle = ({ title, description, image }: Project) => {
   return (
     <div className="w-full ">
       <Card3D hideBall={isSmallScreen} />
-      <CardTitle>{title}</CardTitle>
-      <p className="whitespace-wrap w-full">{description}</p>
+      <CardTitle className="text-foreground">{title}</CardTitle>
+      <p className="whitespace-wrap w-full text-muted-foreground">{description}</p>
     </div>
   );
 };

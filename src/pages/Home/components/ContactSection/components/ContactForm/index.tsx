@@ -105,16 +105,16 @@ const ContactForm = () => {
         </label>
         <label>
           <LabelWrapper>{t("form.assunto.label")}</LabelWrapper>
-          <InputWrapper>
+          <InputWrapper className="pr-2">
             <select
-              className={`text-red-white h-full w-full border-0 outline-0 dark:text-black ${formInputStyle}`}
+              className={` h-full w-full border-0 outline-0 text-black dark:text-black ${formInputStyle}`}
               onChange={(e) => {
                 setSubject(e.target.value);
               }}
               required
             >
               <option
-                className="text-white dark:text-black"
+                className="text-black dark:text-black"
                 value="default"
                 selected
                 disabled

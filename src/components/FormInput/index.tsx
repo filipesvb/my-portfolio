@@ -19,7 +19,7 @@ const FormInput = ({
     <input
       autoComplete="invalid"
       type={tipo}
-      className={`h-full w-full border-0 text-white outline-0 dark:text-black ${className}`}
+      className={`h-full w-full border-0 text-black outline-0 dark:text-black ${className}`}
       placeholder={placeholder}
       {...(onChange && { onChange: (e) => onChange(e) })}
       value={value}

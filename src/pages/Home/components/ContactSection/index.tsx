@@ -11,11 +11,11 @@ const ContactSection = () => {
     <Section className="flex flex-col md:flex-row space-y-10">
       <div className="md:flex-2/5 ">
         <SectionTitle>{t("section_title")}</SectionTitle>
-        <p>{t("section_description")}</p>
+        <p className="text-foreground">{t("section_description")}</p>
         <ContactInfo />
       </div>
       <div className="md:flex-3/5 md:p-3">
-        <div className="h-full rounded-2xl border bg-[#2b6295] dark:bg-white">
+        <div className="h-full rounded-2xl border bg-white dark:bg-white">
           <ContactForm />
         </div>
       </div>

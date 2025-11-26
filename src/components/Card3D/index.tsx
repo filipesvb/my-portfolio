@@ -18,7 +18,7 @@ const Card3D = ({
           ballText="Veja mais"
           className="overflow-hidden h-full "
         >
-          <div className={` md:h-110 h-full border-2`}>
+          <div className={` md:h-110 h-full border-2 border-muted-foreground`}>
             {/* <img src={"image"} className='w-full' /> */}
           </div>
         </HoverableWithBall>
