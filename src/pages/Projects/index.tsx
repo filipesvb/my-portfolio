@@ -53,7 +53,7 @@ const Projects = () => {
     <div className="w-full h-full font-azeret-mono">
       <Wrapper>
         <SectionTitle>{t("section_title")}</SectionTitle>
-        <p className="max-w-100 whitespace-wrap text-md max-w-[300px]">
+        <p className="max-w-100 whitespace-wrap text-md max-w-[300px] text-foreground">
           {t("description")}
         </p>
         <ProjectFilter

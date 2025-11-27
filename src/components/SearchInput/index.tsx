@@ -25,17 +25,18 @@ const SearchInput = ({
   }, [searchValue, onSearch]);
 
   return (
-    <div className="border-1 border-white rounded-lg w-full md:max-w-[300px] flex items-center relative px-1 h-full">
-      <label className=" flex gap-2 p-2 items-center">
+    <div className="border-1 border-muted-foreground rounded-lg w-full md:max-w-[300px] flex items-center relative h-full">
+      <label className=" flex items-center w-full h-full">
         <button
           onClick={() => {
             onSearch(searchValue);
           }}
+          className="px-2"
         >
-          <SearchIcon />
+          <SearchIcon className="stroke-muted-foreground" />
         </button>
         <input
-          className="w-full outline-0 border-0"
+          className="w-full outline-0 border-0 text-foreground  w-full py-2"
           type="text"
           placeholder={placeholder}
           onChange={(e) => onSearch(e.target.value)}
@@ -48,7 +49,7 @@ const SearchInput = ({
           className="absolute right-1 cursor-pointer "
           onClick={() => onSearch("")}
         >
-          <XIcon />
+          <XIcon className="stroke-foreground " />
         </button>
       )}
     </div>

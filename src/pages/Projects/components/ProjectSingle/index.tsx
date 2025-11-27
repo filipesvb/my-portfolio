@@ -44,18 +44,18 @@ const ProjectSingle = ({
 
   return (
     <div
-      className={`flex border-2 rounded-lg gap-5 ${
+      className={`flex border-2 border-muted-foreground rounded-lg gap-5 ${
         inverted && "flex-row-reverse"
       }`}
     >
-      <div className="flex flex-2/5 justify-center items-start">
+      <div className="flex flex-2/5 justify-center items-start hidden md:block">
         <Card3D hideBall height="10" />
       </div>
       <div className="flex-3/5 flex gap-10 py-4 px-10">
         <div className="h-full flex flex-col space-y-20">
           <div>
-            <CardTitle className="text-[2rem] text-left">{title}</CardTitle>
-            <p>{getTextoDestacado(description)}</p>
+            <CardTitle className="text-[2rem] text-left text-foreground">{title}</CardTitle>
+            <p className="text-muted-foreground">{getTextoDestacado(description)}</p>
             <TechStack tags={tags} />
           </div>
           <div className="h-full flex items-end pb-5 gap-12">

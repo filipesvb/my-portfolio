@@ -28,7 +28,7 @@ const ProjectFilter = ({
   }) as CategoryText;
 
   return (
-    <div className="rounded-lg border-1 w-full  mt-6 flex flex-col md:flex-row items-center px-2 py-2 gap-4">
+    <div className="rounded-lg border-1 w-full border-muted-foreground mt-6 flex flex-col md:flex-row items-center px-2 py-2 gap-4">
       <SearchInput
         onSearch={onSearch}
         searchValue={searchValue}

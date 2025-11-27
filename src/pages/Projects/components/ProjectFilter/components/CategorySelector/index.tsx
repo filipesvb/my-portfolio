@@ -36,13 +36,13 @@ const CategorySelector = ({
     <div className="  w-auto h-full flex   items-center w-full">
       <Popover open={open} onOpenChange={setOpen}>
         <PopoverTrigger asChild>
-          <div className="flex border rounded-lg ">
+          <div className="flex border border-muted-foreground rounded-lg w-full justify-between ">
             <Button
               role="combobox"
               aria-expanded={open}
-              className=" items-center h-full bg-transparent flex border-none "
+              className={`items-center h-full bg-transparent flex border-none flex-1   justify-between`}
             >
-              <span className="truncate  overflow-hidden">
+              <span className={`truncate  overflow-hidden text-foreground ${!value && "text-muted-foreground"}`}>
                 {value ? tags.get(value)?.label : text.placeholder}
               </span>
               <ChevronsUpDown className="opacity-50 " />
@@ -52,7 +52,7 @@ const CategorySelector = ({
                 onClick={() => setValue("")}
                 className="cursor-pointer px-2"
               >
-                <XIcon />
+                <XIcon className="stroke-foreground"/>
               </button>
             )}
           </div>
