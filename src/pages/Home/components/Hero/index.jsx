@@ -4,7 +4,7 @@ import Section from "../../../../components/Section";
 
 const Hero = () => {
   return (
-    <Section className="flex flex-col  md:flex-row">
+    <Section className="flex flex-col  md:flex-row justify-between">
       <HeroText />
       <HeroImageContainer />
     </Section>
