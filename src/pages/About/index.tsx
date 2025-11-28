@@ -11,7 +11,7 @@ const About = () => {
     <div className="w-full h-full font-azeret-mono">
       <Wrapper>
         <SectionTitle>{t('section_title')}</SectionTitle>
-        <p className="w-1/2 mb-15">{t('description')}</p>
+        <p className="text-justify md:w-1/2 mb-15 text-foreground">{t('description')}</p>
         <AboutMeContainer compact={false} />
         <div className="w-full flex justify-center py-10">
           <MyTechStack />
