@@ -22,10 +22,10 @@ const LanguageSelect = ({ selectedOption, selectOption }) => {
         <DropdownMenuTrigger asChild>
           <Button
             variant={"outline"}
-            className=" focus:text-black cursor-pointer group border-foreground"
+            className=" focus:text-foreground cursor-pointer group border-foreground"
           >
             <div className="flex items-center gap-2">
-              <span className="group-hover:text-background text-foreground">
+              <span className="group-hover:text-foreground text-foreground">
                 {selectedOption.toUpperCase()}
               </span>
               <ChevronDown className="group-hover:stroke-black stroke-foreground" />
@@ -42,25 +42,25 @@ const LanguageSelect = ({ selectedOption, selectOption }) => {
             
               <DropdownMenuItem
                 asChild
-                className="hover:bg-transparent hover:text-inherit focus:bg-transparent focus:text-inherit rounded-none"
+                className="hover:bg-transparent p-0 hover:text-inherit focus:bg-transparent focus:text-inherit rounded-none "
               >
                 <li
-                  className={`select-none text-center  w-full flex-col  ${styles.selectable} `}
+                  className={`select-none text-center  w-full flex-col group `}
                 >
                   <button
-                    className="cursor-pointer py-3 px-4 w-full"
+                    className="cursor-pointer py-3 px-4 w-full group-hover:bg-foreground hover:text-background transition-colors duration-200 "
                     onClick={() => {
                       handleSelectOption(language);
                     }}
                   >
-                    <span className="text-foreground">{language.toUpperCase()}</span>
+                    <span className="text-foreground group-hover:text-background">{language.toUpperCase()}</span>
                   </button>
                   
                 </li>
               </DropdownMenuItem>
               {i !== supportedLngs.length - 1 && (
                 <div className=" text-red-400 w-full flex justify-center">
-                  <hr className="text-red-300  border-t-muted-foreground w-9/10 " />
+                  <hr className="text-red-300  border-t-muted-foreground w-10/10 " />
                 </div>
               )}
           </>

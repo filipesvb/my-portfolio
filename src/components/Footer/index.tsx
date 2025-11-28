@@ -12,13 +12,13 @@ const Footer = () => {
         <div className="w-full flex">
           <Menu variant={'footer'} />
         </div>
-        <div className="flex justify-between items-center">
-          <div>
-            <span>2025 © Filipe Vilas Bôas</span>
-          </div>
+        <div className="flex flex-col justify-between items-center">
           <div className='flex items-center gap-5'>
-            <span>Vamos nos conectar!</span>
+            <span className='text-foreground'>Vamos nos conectar!</span>
             <SocialList />
+          </div>
+          <div>
+            <span className='text-foreground'>2025 © Filipe Vilas Bôas</span>
           </div>
         </div>
       </div>

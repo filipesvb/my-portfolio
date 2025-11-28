@@ -36,17 +36,40 @@ const Menu = ({ variant = "" }) => {
   };
 
   return (
-    <nav className="px-4">
-      <div className={`${menuClassName[variant] || "flex flex-col gap-3"}`}>
-        {menuClassName[variant] ? <div>desktop</div> : <MobileMenu t={t} />}
+    <nav className="">
+      <div>
+        {menuClassName[variant] ? <DesktopMenu t={t} variantStyle={menuClassName[variant]} /> : <MobileMenu t={t} />}
       </div>
     </nav>
   );
 };
 
+const DesktopMenu = ({t, variantStyle}) => {
+  return (
+    <div className={`flex w-full gap-6 ${variantStyle}`}>
+      {menuOptions.map((opt, i) => {
+        const content = (
+          <Link to={`/${opt.to}`} className="flex gap-1">
+            <span className="group-hover:text-background transition-colors duration-300 text-foreground">
+              {t(`${opt.value}`)}
+            </span>
+          </Link>
+        );
+
+        return (
+          <>
+            {content}
+          </>
+        );
+      
+      })}
+    </div>
+  )
+}
+
 const MobileMenu = ({ t }) => {
   return (
-    <>
+    <div className="px-4 space-y-2">
       {menuOptions.map((opt, i) => {
         const Icon = opt.icon;
         const content = (
@@ -71,7 +94,7 @@ const MobileMenu = ({ t }) => {
           </Button>
         );
       })}
-    </>
+    </div>
   );
 };
 
