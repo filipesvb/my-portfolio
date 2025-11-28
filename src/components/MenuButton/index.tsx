@@ -24,9 +24,9 @@ const MenuButton = ({language, changeLanguage} : {language: string; changeLangua
       <SheetTrigger asChild>
         <Button
           size={"icon-lg"}
-          className="bg-muted-background border-foreground border-1"
+          className="bg-muted-background border-foreground border-1 group hover:bg-foreground"
         >
-          <MenuIcon className="stroke-foreground  " />
+          <MenuIcon className="stroke-foreground  group-hover:stroke-background" />
         </Button>
       </SheetTrigger>
       <SheetContent

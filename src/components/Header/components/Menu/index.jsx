@@ -73,7 +73,7 @@ const MobileMenu = ({ t }) => {
       {menuOptions.map((opt, i) => {
         const Icon = opt.icon;
         const content = (
-          <Link to={`/${opt.to}`} className="bg-muted-background">
+          <Link to={`/${opt.to}`} className="bg-muted-background ">
             <Icon className="group-hover:stroke-background transition-colors duration-300 stroke-foreground" />
             <span className="group-hover:text-background transition-colors duration-300 text-foreground">
               {t(`${opt.value}`)}
@@ -86,7 +86,7 @@ const MobileMenu = ({ t }) => {
             variant={"outline"}
             asChild
             key={`${opt.value}`}
-            className="flex justify-start group border-muted-foreground text-foreground"
+            className="flex justify-start border-muted-foreground group hover:bg-foreground dark:hover:bg-foreground"
           >
             {<SheetClose asChild>
               {content}

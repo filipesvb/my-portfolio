@@ -22,13 +22,13 @@ const LanguageSelect = ({ selectedOption, selectOption }) => {
         <DropdownMenuTrigger asChild>
           <Button
             variant={"outline"}
-            className=" focus:text-foreground cursor-pointer group border-foreground"
+            className=" focus:text-foreground cursor-pointer group border-foreground hover:bg-foreground dark:hover:bg-foreground"
           >
             <div className="flex items-center gap-2">
-              <span className="group-hover:text-foreground text-foreground">
+              <span className="group-hover:text-background text-foreground">
                 {selectedOption.toUpperCase()}
               </span>
-              <ChevronDown className="group-hover:stroke-black stroke-foreground" />
+              <ChevronDown className="group-hover:stroke-background stroke-foreground" />
             </div>
           </Button>
         </DropdownMenuTrigger>
