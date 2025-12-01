@@ -145,7 +145,7 @@ const ContactForm = () => {
         />
       </fieldset>
       <fieldset>
-        <Magnetic className="w-full ">
+        <Magnetic className=" w-full md:w-auto">
           <FormButton>Enviar</FormButton>
         </Magnetic>
       </fieldset>
