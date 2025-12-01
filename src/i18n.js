@@ -23,7 +23,8 @@ i18n
       'project_section',
       'projects',
       'aboutMe',
-      'contact'
+      'contact',
+      "footer"
     ],
     fallbackLng: ['en'],
     interpolation: {

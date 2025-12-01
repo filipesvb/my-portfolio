@@ -24,7 +24,7 @@ const SocialList = () => {
           <Link
             target="_blank"
             to={s.to}
-            className="group px-3 flex flex-row items-center w-full md:gap-2  py-5 border-t md:border-none border-muted-foreground hover:bg-foreground transition-colors duration-300 text-foreground"
+            className="group px-3 flex flex-row items-center w-full gap-4 md:gap-2  py-5 border-t md:border-none border-muted-foreground hover:bg-foreground transition-colors duration-300 text-foreground"
           >
             <div className="flex-2/10">
               <Icon className="fill-foreground group-hover:fill-background w-12  h-12 md:w-6 md:y-6"/>

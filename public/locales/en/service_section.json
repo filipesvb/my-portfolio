@@ -1,15 +1,15 @@
 {
   "section_title": "My Services",
   "section_cards": {
-    "card_web": {
+    "web_design": {
       "title": "Web Design",
       "description": "Creation of modern, responsive, and visually appealing websites, focused on performance, usability, and personalized visual identity."
     },
-    "card_api": {
+    "api_development": {
       "title": "API Development",
       "description": "Building robust and scalable APIs for servers, integrating databases and providing secure and efficient endpoints for web and mobile applications."
     },
-    "card_data": {
+    "database": {
       "title": "Database",
       "description": "Modeling, implementation, and optimization of relational and non-relational databases, ensuring data integrity, security, and high performance."
     }
