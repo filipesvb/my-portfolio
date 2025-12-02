@@ -6,27 +6,30 @@ import {
   SheetTrigger,
 } from "../ui/sheet";
 import { Button } from "../ui/button";
-import { MenuIcon } from "lucide-react";
+import { MenuIcon, MoonIcon, SunIcon } from "lucide-react";
 
 import LanguageSelect from "../LanguageSelect";
 import Menu from "../Header/components/Menu";
 import SocialList from "../Header/components/SocialList";
 import { useTheme } from "@/contexts/ThemeContext";
 
-
-
-const MenuButton = ({language, changeLanguage} : {language: string; changeLanguage: (str:string) => void}) => {
-
+const MenuButton = ({
+  language,
+  changeLanguage,
+}: {
+  language: string;
+  changeLanguage: (str: string) => void;
+}) => {
   const { theme, toggleTheme } = useTheme();
-  
+
   return (
-    <Sheet >
+    <Sheet>
       <SheetTrigger asChild>
         <Button
           size={"icon-lg"}
-          className="bg-muted-background border-foreground border-1 group hover:bg-foreground"
+          className="bg-muted-background border-foreground border-1 hover:bg-foreground group"
         >
-          <MenuIcon className="stroke-foreground  group-hover:stroke-background" />
+          <MenuIcon className="stroke-foreground group-hover:stroke-background" />
         </Button>
       </SheetTrigger>
       <SheetContent
@@ -37,26 +40,32 @@ const MenuButton = ({language, changeLanguage} : {language: string; changeLangua
           <SheetTitle>
             <span className="text-foreground">Menu</span>
           </SheetTitle>
-          <Button variant={"outline"} onClick={toggleTheme} className="border-foreground">
-            {theme === "light" ? "☀️" : "🌙"}
+          <Button
+            variant={"outline"}
+            onClick={toggleTheme}
+            className="border-foreground"
+          >
+            {theme === "light" ? (
+              <MoonIcon className="stroke-foreground" />
+            ) : (
+              <SunIcon className="stroke-foreground" />
+            )}
           </Button>
           <LanguageSelect
-            
             selectedOption={language}
             selectOption={changeLanguage}
           />
         </SheetHeader>
-        
+
         <div className="flex h-full flex-col justify-between gap-4">
-          <Menu  />
+          <Menu />
           <div className="w-full">
             <SocialList />
           </div>
         </div>
-        
       </SheetContent>
     </Sheet>
-  )
-}
+  );
+};
 
 export default MenuButton;
