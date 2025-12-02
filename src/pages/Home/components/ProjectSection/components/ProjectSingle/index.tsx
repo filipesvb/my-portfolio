@@ -11,14 +11,15 @@ type Project = {
 };
 
 const ProjectSingle = ({ title, description, image }: Project) => {
-
   const isSmallScreen = useMediaQuery();
-  
+
   return (
-    <div className="w-full ">
-      <Card3D hideBall={isSmallScreen} />
+    <div className="w-full">
+      <Card3D hideBall={isSmallScreen} image={image} />
       <CardTitle className="text-foreground">{title}</CardTitle>
-      <p className="whitespace-wrap w-full text-muted-foreground">{description}</p>
+      <p className="whitespace-wrap text-muted-foreground w-full">
+        {description}
+      </p>
     </div>
   );
 };

@@ -3,9 +3,9 @@
   "description": "Personal projects I've been building throughout my learning journey.",
   "projects": {
     "project1": {
-      "title": "EcoTrack",
-      "shortDescription": "App for tracking sustainable habits.",
-      "longDescription": "EcoTrack is a web platform that allows users to record and monitor everyday sustainable actions, such as recycling, water conservation, and eco-friendly transportation. Developed with React, Vite, and Firebase, the app offers gamification with achievements and visual statistics. Ideal for schools and communities that promote environmental education."
+      "title": "My Portfolio",
+      "shortDescription": "Portfolio created to showcase my skills and projects I have developed.",
+      "longDescription": "This portfolio was built to highlight my technical expertise and the projects I have worked on throughout my development journey. Developed with React and bundled using Vite, it leverages TailwindCSS for styling, Shadcn for reusable and high-performance components, i18next for multilingual support, and Framer Motion for dynamic animations and transitions."
     },
     "project2": {
       "title": "LinguaPlay",

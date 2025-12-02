@@ -1,4 +1,5 @@
 import { techstack, TechKey, Technology, tagValues } from "./techstack";
+import MyPortfolioImage from "@/assets/projects/images/myportfolio.png";
 
 export type Project = {
   id: string;
@@ -14,12 +15,12 @@ export type Project = {
 export const projects: Project[] = [
   {
     id: "project1",
-    image: "/images/project1.png",
+    image: MyPortfolioImage,
     links: {
-      github: "",
-      live: "",
+      github: "https://github.com/filipesvb/my-portfolio",
+      live: "https://filipevilasboas.netlify.app",
     },
-    tags: [tagValues.REACT, tagValues.FIREBASE],
+    tags: [tagValues.REACT, tagValues.TAILWINDCSS, tagValues.I18NEXT],
   },
   {
     id: "project2",

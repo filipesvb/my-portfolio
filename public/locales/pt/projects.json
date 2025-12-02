@@ -1,11 +1,11 @@
 {
   "section_title": "Meus Projetos",
-  "description" :"Projetos pessoais que tenho construído durante minha jornada de aprendizado.",
+  "description": "Projetos pessoais que tenho construído durante minha jornada de aprendizado.",
   "projects": {
     "project1": {
-      "title": "EcoTrack",
-      "shortDescription": "Aplicativo para monitoramento de hábitos sustentáveis.",
-      "longDescription": "EcoTrack é uma plataforma web que permite aos usuários registrar e acompanhar ações sustentáveis do dia a dia, como reciclagem, economia de água e transporte ecológico. Desenvolvido com React, Vite e Firebase, o app oferece gamificação com conquistas e estatísticas visuais. Ideal para escolas e comunidades que promovem educação ambiental."
+      "title": "Meu Portfolio",
+      "shortDescription": "Portfólio criado para destacar minhas habilidades e projetos desenvolvidos.",
+      "longDescription": "Este portfólio foi desenvolvido para apresentar minhas competências técnicas e os trabalhos realizados ao longo da minha jornada como desenvolvedor. Construído com React e empacotado com Vite, utiliza TailwindCSS para estilização, Shadcn para componentes reutilizáveis e de alta performance, i18next para suporte multilíngue e Framer Motion para animações e transições dinâmicas."
     },
     "project2": {
       "title": "LinguaPlay",

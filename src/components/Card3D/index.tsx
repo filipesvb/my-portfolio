@@ -5,21 +5,29 @@ const Card3D = ({
   width,
   height,
   hideBall,
+  image,
 }: {
   width?: string;
   height?: string;
   hideBall: boolean;
+  image?: string;
 }) => {
   return (
-    <CardContainer className="inter-var  w-full " containerClassName="py-0 md:py-8">
-      <CardBody className=" relative group/card md:min-w-[18rem]  md:h-auto h-[500px] md:h-auto w-full">
+    <CardContainer
+      className="inter-var w-full"
+      containerClassName="py-0 md:py-8"
+    >
+      <CardBody className="group/card relative h-[500px] w-full md:h-auto md:min-w-[18rem]">
         <HoverableWithBall
           hideBall={hideBall}
           ballText="Veja mais"
-          className="overflow-hidden h-full "
+          className="h-full overflow-hidden"
         >
-          <div className={` md:h-110 h-full border-2 border-muted-foreground`}>
-            {/* <img src={"image"} className='w-full' /> */}
+          <div className={`md:h-110 h-full`}>
+            <img
+              src={image}
+              className="h-full w-full object-cover object-top"
+            />
           </div>
         </HoverableWithBall>
       </CardBody>
