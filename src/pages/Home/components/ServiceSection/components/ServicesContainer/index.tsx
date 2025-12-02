@@ -1,12 +1,12 @@
 import { useTranslation } from "react-i18next";
 import ServiceSingle from "../ServiceSingle";
-import { services } from "@/data/services"
+import { services } from "@/data/services";
 
 const ServicesContainer = () => {
   const { t } = useTranslation("service_section");
 
   return (
-    <div className="flex w-full flex-col gap-10 md:flex-row">
+    <div className="flex w-full flex-col gap-10 overflow-x-hidden md:flex-row">
       {services.map((service, i) => (
         <ServiceSingle
           title={t(`section_cards.${service.id}.title`)}
