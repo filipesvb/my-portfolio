@@ -4,14 +4,16 @@ import ContactForm from "./components/ContactForm";
 import { useTranslation } from "react-i18next";
 import ContactInfo from "./components/ContactInfo";
 
-const ContactSection = () => {
+const ContactSection = ({ descOverwrite }: { descOverwrite?: string }) => {
   const { t } = useTranslation("contact");
 
   return (
-    <Section className="flex flex-col md:flex-row space-y-10">
-      <div className="md:flex-2/5 ">
+    <Section className="flex flex-col space-y-10 md:flex-row">
+      <div className="md:flex-2/5">
         <SectionTitle>{t("section_title")}</SectionTitle>
-        <p className="text-foreground">{t("section_description")}</p>
+        <p className="text-foreground">
+          {descOverwrite || t("section_description")}
+        </p>
         <ContactInfo />
       </div>
       <div className="md:flex-3/5 md:p-3">

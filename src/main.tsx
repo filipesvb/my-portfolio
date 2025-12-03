@@ -12,6 +12,7 @@ import Footer from "./components/Footer/index.js";
 import About from "./pages/About/index.js";
 import { ThemeProvider } from "./contexts/ThemeContext.js";
 import ScrollAwareMenuButton from "./components/ScrollAwareMenuButton.js";
+import Contact from "./pages/Contact/index.js";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
@@ -23,6 +24,7 @@ createRoot(document.getElementById("root")!).render(
             <Route path="/" element={<App />} />
             <Route path="/projetos" element={<Projects />} />
             <Route path="/sobre" element={<About />} />
+            <Route path="/contato" element={<Contact />} />
           </Routes>
           <Footer />
         </div>
