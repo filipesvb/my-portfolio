@@ -1,15 +1,15 @@
-import { ScrollArea, ScrollBar } from '@/components/ui/scroll-area';
-import ProjectSingle from '../ProjectSingle';
-import { projects } from '../../../../../../data/projects';
-import { useTranslation } from 'react-i18next';
+import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
+import ProjectSingle from "../ProjectSingle";
+import { projects } from "../../../../../../data/projects";
+import { useTranslation } from "react-i18next";
 
 const ProjectContainer = () => {
-  const { t } = useTranslation('projects');
+  const { t } = useTranslation("projects");
 
   return (
     <div className="">
-      <ScrollArea className="w-full relative ">
-        <div className="flex flex-col w-full md:space-x-12 space-y-12 items-center px-4 relative  md:items-stretch md:flex-row ">
+      <ScrollArea className="relative w-full">
+        <div className="relative flex w-full flex-col items-center space-y-12 px-4 pt-3 md:flex-row md:items-stretch md:space-x-12 md:pt-0">
           {projects.map((p) => (
             <ProjectSingle
               key={p.id}

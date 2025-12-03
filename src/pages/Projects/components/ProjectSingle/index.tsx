@@ -5,6 +5,7 @@ import TechStack from "@/components/TechStack";
 import { Magnetic } from "@/components/ui/shadcn-io/magnetic";
 import LiveLink from "./components/LiveLink";
 import GithubLink from "./components/GithubLink";
+import { motion } from "framer-motion";
 
 interface ProjectSingleProps {
   title: string;
@@ -29,36 +30,44 @@ const ProjectSingle = ({
   function getTextoDestacado(desc: string) {
     const partes = desc.split(new RegExp(`(${query})`, "gi"));
 
-    return query && query.length > 1
-      ? partes.map((parte, index) =>
-          parte.toLowerCase() === query.toLowerCase() ? (
-            <span key={index} style={{ backgroundColor: "#315078" }}>
-              {parte}
-            </span>
-          ) : (
-            <span key={index}>{parte}</span>
-          ),
-        )
-      : desc;
+    return query && query.length > 1 ? (
+      partes.map((parte, index) =>
+        parte.toLowerCase() === query.toLowerCase() ? (
+          <motion.span key={index} style={{ backgroundColor: "#315078" }}>
+            {parte}
+          </motion.span>
+        ) : (
+          <span key={index} className="text-foreground">
+            {parte}
+          </span>
+        ),
+      )
+    ) : (
+      <span className="text-foreground">{desc}</span>
+    );
   }
 
   return (
     <div
-      className={`flex border-2 border-muted-foreground rounded-lg gap-5 ${
+      className={`border-muted-foreground flex gap-5 rounded-lg border-2 ${
         inverted && "flex-row-reverse"
       }`}
     >
-      <div className="flex flex-2/5 justify-center items-start hidden md:block">
+      <div className="flex-2/5 flex hidden items-start justify-center md:block">
         <Card3D hideBall height="10" />
       </div>
-      <div className="flex-3/5 flex gap-10 py-4 px-10">
-        <div className="h-full flex flex-col space-y-20">
+      <div className="flex-3/5 flex gap-10 px-10 py-4">
+        <div className="flex h-full flex-col space-y-20">
           <div>
-            <CardTitle className="text-[2rem] text-left text-foreground">{title}</CardTitle>
-            <p className="text-muted-foreground">{getTextoDestacado(description)}</p>
+            <CardTitle className="text-foreground text-left text-[2rem]">
+              {title}
+            </CardTitle>
+            <p className="text-muted-foreground">
+              {getTextoDestacado(description)}
+            </p>
             <TechStack tags={tags} />
           </div>
-          <div className="h-full flex items-end pb-5 gap-12">
+          <div className="flex h-full items-end gap-12 pb-5">
             <Magnetic>
               <LiveLink link={links.live} />
             </Magnetic>
