@@ -17,6 +17,7 @@ interface ProjectSingleProps {
   inverted?: boolean;
   query?: string;
   tags: TechKey[];
+  image: string;
 }
 
 const ProjectSingle = ({
@@ -26,6 +27,7 @@ const ProjectSingle = ({
   inverted = false,
   query,
   tags,
+  image,
 }: ProjectSingleProps) => {
   function getTextoDestacado(desc: string) {
     const partes = desc.split(new RegExp(`(${query})`, "gi"));
@@ -53,12 +55,14 @@ const ProjectSingle = ({
         inverted && "flex-row-reverse"
       }`}
     >
-      <div className="flex-2/5 flex hidden items-start justify-center md:block">
-        <Card3D hideBall height="10" />
+      <div className="flex-2/5 hidden items-start justify-center md:flex">
+        <div className="relative w-20">
+          <Card3D hideBall image={image} />
+        </div>
       </div>
-      <div className="flex-3/5 flex gap-10 px-10 py-4">
-        <div className="flex h-full flex-col space-y-20">
-          <div>
+      <div className="flex-3/5 flex w-full gap-10 py-4">
+        <div className="flex h-full w-full flex-col space-y-20">
+          <div className="w-full px-4">
             <CardTitle className="text-foreground text-left text-[2rem]">
               {title}
             </CardTitle>
@@ -67,7 +71,7 @@ const ProjectSingle = ({
             </p>
             <TechStack tags={tags} />
           </div>
-          <div className="flex h-full items-end gap-12 pb-5">
+          <div className="flex h-full items-end gap-12 px-4 pb-5">
             <Magnetic>
               <LiveLink link={links.live} />
             </Magnetic>

@@ -20,7 +20,14 @@ export const projects: Project[] = [
       github: "https://github.com/filipesvb/my-portfolio",
       live: "https://filipevilasboas.netlify.app",
     },
-    tags: [tagValues.REACT, tagValues.TAILWINDCSS, tagValues.I18NEXT],
+    tags: [
+      tagValues.REACT,
+      tagValues.TAILWINDCSS,
+      tagValues.I18NEXT,
+      tagValues.NETLIFY,
+      tagValues.TYPESCRIPT,
+      tagValues.VITE,
+    ],
   },
   {
     id: "project2",

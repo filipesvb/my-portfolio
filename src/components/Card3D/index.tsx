@@ -23,7 +23,9 @@ const Card3D = ({
           ballText="Veja mais"
           className="h-full overflow-hidden"
         >
-          <div className={`md:h-110 border-foreground h-full border-2`}>
+          <div
+            className={`md:h-110 border-muted-foreground h-full w-full border-2`}
+          >
             <img
               src={image}
               className="h-full w-full object-cover object-top"
