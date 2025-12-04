@@ -24,7 +24,7 @@ const ContactInfo = () => {
         <div className="flex-4/5 flex text-inherit">
           <a
             className="flex items-center gap-2 text-inherit"
-            href="tel:+551999734-0189"
+            href="https://api.whatsapp.com/send?phone=+551999734-0189"
           >
             <span className="truncate text-inherit">+55 (19)99734-0189</span>
             <ExternalLink className="stroke-foreground" />
