@@ -51,34 +51,34 @@ const ProjectSingle = ({
 
   return (
     <div
-      className={`border-muted-foreground flex gap-5 rounded-lg border-2 ${
+      className={`border-muted-foreground flex w-full gap-5 rounded-lg border-2 ${
         inverted && "flex-row-reverse"
       }`}
     >
-      <div className="flex-2/5 hidden items-start justify-center md:flex">
-        <div className="relative w-20">
+      <div className="md:flex-3/5 hidden w-full items-start justify-center md:flex">
+        <div className="w-30 w-full">
           <Card3D hideBall image={image} />
         </div>
       </div>
-      <div className="flex-3/5 flex w-full gap-10 py-4">
-        <div className="flex h-full w-full flex-col space-y-20">
-          <div className="w-full px-4">
-            <CardTitle className="text-foreground text-left text-[2rem]">
-              {title}
-            </CardTitle>
-            <p className="text-muted-foreground">
-              {getTextoDestacado(description)}
-            </p>
-            <TechStack tags={tags} />
-          </div>
-          <div className="flex h-full items-end gap-12 px-4 pb-5">
-            <Magnetic>
-              <LiveLink link={links.live} />
-            </Magnetic>
-            <Magnetic>
-              <GithubLink link={links.github} />
-            </Magnetic>
-          </div>
+
+      <div className="growth-0 flex h-full w-full flex-col space-y-20">
+        <div className="w-full px-4">
+          <CardTitle className="text-foreground text-left text-[2rem]">
+            {title}
+          </CardTitle>
+          <p className="text-muted-foreground w-full">
+            {getTextoDestacado(description)}
+          </p>
+
+          <TechStack tags={tags} />
+        </div>
+        <div className="flex h-full items-end gap-12 px-4 pb-5">
+          <Magnetic>
+            <LiveLink link={links.live} />
+          </Magnetic>
+          <Magnetic>
+            <GithubLink link={links.github} />
+          </Magnetic>
         </div>
       </div>
     </div>
