@@ -7,11 +7,13 @@ import { useTranslation } from "react-i18next";
 import MenuButton from "../../components/MenuButton";
 import { useTheme } from "@/contexts/ThemeContext";
 import { Button } from "../ui/button";
-import { MoonIcon, SunIcon } from "lucide-react";
+import { HomeIcon, MoonIcon, SunIcon } from "lucide-react";
+import { Link, useLocation } from "react-router";
 
 const Header = () => {
   const { i18n } = useTranslation();
   const [language, setLanguage] = useState(i18n.language);
+  const { pathname } = useLocation();
 
   const { theme, toggleTheme } = useTheme();
 
@@ -19,6 +21,8 @@ const Header = () => {
     i18n.changeLanguage(language);
     setLanguage(language);
   };
+
+  const locationIsHome = pathname == "/";
 
   return (
     <header className="font-inter w-full py-5">
@@ -49,7 +53,18 @@ const Header = () => {
           </div>
         </div>
 
-        <div className="flex justify-end md:hidden">
+        <div
+          className={`flex items-center ${!locationIsHome ? "justify-between" : "justify-end"} md:hidden`}
+        >
+          {!locationIsHome && (
+            <Link to={"/"} className="">
+              <HomeIcon
+                className="stroke-foreground"
+                size={32}
+                strokeWidth={1}
+              />
+            </Link>
+          )}
           <MenuButton language={language} changeLanguage={changeLanguage} />
         </div>
       </Wrapper>
