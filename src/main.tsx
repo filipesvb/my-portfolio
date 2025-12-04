@@ -1,7 +1,5 @@
 import { StrictMode } from "react";
-import React from "react";
 import { createRoot } from "react-dom/client";
-import i18n from "./i18n.js";
 import { Routes, Route, BrowserRouter } from "react-router";
 import {} from "react";
 import "./index.css";
@@ -13,11 +11,13 @@ import About from "./pages/About/index.js";
 import { ThemeProvider } from "./contexts/ThemeContext.js";
 import ScrollAwareMenuButton from "./components/ScrollAwareMenuButton.js";
 import Contact from "./pages/Contact/index.js";
+import { ScrollToTop } from "./components/ScrollToTop";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <ThemeProvider>
       <BrowserRouter>
+        <ScrollToTop />
         <div className="">
           <Header />
           <Routes>
