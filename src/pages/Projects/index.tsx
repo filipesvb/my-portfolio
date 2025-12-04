@@ -6,11 +6,14 @@ import { projects } from "../../data/projects";
 import { TechKey, techstack } from "../../data/techstack";
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
+import { useParams, useSearchParams } from "react-router";
 
 const Projects = () => {
   const { t } = useTranslation("projects");
+  const [searchParams] = useSearchParams();
+  const query = searchParams.get("query");
 
-  const [searchValue, setSearchValue] = useState("");
+  const [searchValue, setSearchValue] = useState(query || "");
   const [categoryValue, setCategoryValue] = useState("");
 
   function handleSearch(value: string) {
@@ -50,10 +53,10 @@ const Projects = () => {
   });
 
   return (
-    <div className="w-full h-full font-azeret-mono">
+    <div className="font-azeret-mono h-full w-full">
       <Wrapper>
         <SectionTitle>{t("section_title")}</SectionTitle>
-        <p className="max-w-100 whitespace-wrap text-md max-w-[300px] text-foreground">
+        <p className="max-w-100 whitespace-wrap text-md text-foreground max-w-[300px]">
           {t("description")}
         </p>
         <ProjectFilter

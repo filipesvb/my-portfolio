@@ -14,7 +14,7 @@ const Card3D = ({
 }) => {
   return (
     <CardContainer
-      className="inter-var w-full bg-green-400 md:px-3"
+      className="inter-var w-full md:px-3"
       containerClassName="py-0 md:py-8"
     >
       <CardBody className="group/card relative h-[500px] w-full md:h-auto md:w-40 md:min-w-[18rem]">
