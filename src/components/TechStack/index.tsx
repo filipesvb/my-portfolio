@@ -27,7 +27,7 @@ const TechStack = ({ tags }: TechStackProps) => {
 
   return (
     <div
-      className="no-scrollbar fade-mask fade-left-4 fade-right-4 md:fade-0 relative flex w-full flex-wrap gap-2 overflow-x-auto px-2 py-4 md:px-0"
+      className="no-scrollbar fade-mask fade-left-4 fade-right-4 md:fade-0 relative flex w-full gap-2 overflow-x-auto px-2 py-4 md:flex-wrap md:px-0"
       ref={containerRef}
     >
       {tags.map((t, i) => {
