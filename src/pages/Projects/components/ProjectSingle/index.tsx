@@ -86,7 +86,7 @@ const ProjectSingle = ({
             <Button
               variant={"outline"}
               size={"icon"}
-              className="border-foreground flex rounded-full md:hidden"
+              className="bg-background border-foreground flex rounded-full md:hidden"
               onClick={handleFlip}
             >
               <Image className="stroke-foreground" size={32} />
@@ -123,10 +123,10 @@ const ProjectSingle = ({
               <Button
                 variant={"outline"}
                 size={"icon"}
-                className="border-foreground flex rounded-full shadow-sm md:hidden"
+                className="border-foreground dark:bg-background flex rounded-full shadow-sm md:hidden"
                 onClick={handleFlip}
               >
-                <Folder className="stroke-foreground rotate-y-180" />
+                <Folder className="stroke-foreground rotate-y-180 dark:stroke-foreground" />
               </Button>
             </motion.div>
             <img src={image} className="z-1" />
