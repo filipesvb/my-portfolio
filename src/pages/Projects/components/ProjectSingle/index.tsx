@@ -6,6 +6,10 @@ import { Magnetic } from "@/components/ui/shadcn-io/magnetic";
 import LiveLink from "./components/LiveLink";
 import GithubLink from "./components/GithubLink";
 import { motion } from "framer-motion";
+import { CardContainer } from "@/components/ui/shadcn-io/3d-card";
+import { useState } from "react";
+import { Folder, Image } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 interface ProjectSingleProps {
   title: string;
@@ -29,6 +33,8 @@ const ProjectSingle = ({
   tags,
   image,
 }: ProjectSingleProps) => {
+  const [isFlipped, setIsFlipped] = useState(false);
+
   function getTextoDestacado(desc: string) {
     const partes = desc.split(new RegExp(`(${query})`, "gi"));
 
@@ -49,36 +55,82 @@ const ProjectSingle = ({
     );
   }
 
+  function handleFlip() {
+    setIsFlipped(!isFlipped);
+  }
+
   return (
-    <div
-      className={`border-muted-foreground flex w-full gap-5 rounded-lg border-2 ${
-        inverted && "flex-row-reverse"
-      }`}
-    >
-      <div className="md:flex-3/5 hidden w-full items-start justify-center md:flex">
-        <div className="w-30 w-full">
-          <Card3D hideBall image={image} />
+    // AVÔ
+    <div className={`perspective-[1000px] group h-full w-full`}>
+      {/* PAI */}
+      <div
+        className={`border-muted-foreground transform-3d duration-400 relative flex w-full gap-5 overflow-visible rounded-lg border-2 transition-all ease-in ${isFlipped && "-rotate-y-180"} ${
+          inverted && "flex-row-reverse"
+        }`}
+      >
+        <div className="md:flex-3/5 hidden w-full items-start justify-center md:flex">
+          <div className="w-30 w-full">
+            <Card3D hideBall image={image} />
+          </div>
         </div>
-      </div>
 
-      <div className="growth-0 flex h-full w-full flex-col space-y-20">
-        <div className="w-full px-4">
-          <CardTitle className="text-foreground text-left text-[2rem]">
-            {title}
-          </CardTitle>
-          <p className="text-muted-foreground w-full">
-            {getTextoDestacado(description)}
-          </p>
+        {/* FRENTE */}
+        <div className="growth-0 translate-z-0 bg-background backface-hidden relative flex h-full w-full flex-col space-y-20 rounded-lg py-2">
+          <motion.div
+            animate={{ opacity: 1 }}
+            initial={{ opacity: 0 }}
+            className="absolute right-2 top-2 shadow-2xl"
+            viewport={{ once: true }}
+            transition={{ duration: 1.6 }}
+          >
+            <Button
+              variant={"outline"}
+              size={"icon"}
+              className="border-foreground flex rounded-full md:hidden"
+              onClick={handleFlip}
+            >
+              <Image className="stroke-foreground" size={32} />
+            </Button>
+          </motion.div>
+          <div className="w-full px-4">
+            <CardTitle className="text-foreground text-left text-[2rem]">
+              {title}
+            </CardTitle>
+            <p className="text-muted-foreground w-full">
+              {getTextoDestacado(description)}
+            </p>
 
-          <TechStack tags={tags} />
+            <TechStack tags={tags} />
+          </div>
+          <div className="flex h-full items-end gap-12 px-4 pb-5">
+            <Magnetic>
+              <LiveLink link={links.live} />
+            </Magnetic>
+            <Magnetic>
+              <GithubLink link={links.github} />
+            </Magnetic>
+          </div>
         </div>
-        <div className="flex h-full items-end gap-12 px-4 pb-5">
-          <Magnetic>
-            <LiveLink link={links.live} />
-          </Magnetic>
-          <Magnetic>
-            <GithubLink link={links.github} />
-          </Magnetic>
+
+        {/* TRÁS */}
+        <div className="-translate-z-1 rotate-y-180 backface-hidden absolute left-0 top-0 h-full w-full overflow-hidden rounded-lg">
+          <div className="z-1 relative h-full w-full">
+            <motion.div
+              animate={{ opacity: 1 }}
+              initial={{ opacity: 0 }}
+              className="absolute right-2 top-2"
+            >
+              <Button
+                variant={"outline"}
+                size={"icon"}
+                className="border-foreground flex rounded-full shadow-sm md:hidden"
+                onClick={handleFlip}
+              >
+                <Folder className="stroke-foreground rotate-y-180" />
+              </Button>
+            </motion.div>
+            <img src={image} className="z-1" />
+          </div>
         </div>
       </div>
     </div>
