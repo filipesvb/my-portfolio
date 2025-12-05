@@ -61,7 +61,7 @@ const ProjectSingle = ({
 
   return (
     // AVÔ
-    <div className={`perspective-[1000px] group h-full w-full`}>
+    <div className={`perspective-[1000px] h-full w-full`}>
       {/* PAI */}
       <div
         className={`border-muted-foreground transform-3d duration-400 relative flex w-full gap-5 overflow-visible rounded-lg border-2 transition-all ease-in ${isFlipped && "-rotate-y-180"} ${
@@ -75,7 +75,7 @@ const ProjectSingle = ({
         </div>
 
         {/* FRENTE */}
-        <div className="growth-0 translate-z-0 bg-background backface-hidden relative flex h-full w-full flex-col space-y-20 rounded-lg py-2">
+        <div className="growth-0 translate-z-0 bg-background backface-hidden relative flex h-full w-full flex-col space-y-20 rounded-lg py-2 md:py-0">
           <motion.div
             animate={{ opacity: 1 }}
             initial={{ opacity: 0 }}
@@ -102,7 +102,7 @@ const ProjectSingle = ({
 
             <TechStack tags={tags} />
           </div>
-          <div className="flex h-full items-end gap-12 px-4 pb-5">
+          <div className="relative flex h-full items-end gap-12 px-4 pb-5">
             <Magnetic>
               <LiveLink link={links.live} />
             </Magnetic>
@@ -113,7 +113,7 @@ const ProjectSingle = ({
         </div>
 
         {/* TRÁS */}
-        <div className="-translate-z-1 rotate-y-180 backface-hidden absolute left-0 top-0 h-full w-full overflow-hidden rounded-lg">
+        <div className="-translate-z-1 rotate-y-180 backface-hidden absolute left-0 top-0 block h-full w-full overflow-hidden rounded-lg md:hidden">
           <div className="z-1 relative h-full w-full">
             <motion.div
               animate={{ opacity: 1 }}
