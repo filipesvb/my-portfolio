@@ -15,7 +15,7 @@ const ProjectSingle = ({ title, description, image }: Project) => {
   const isSmallScreen = useMediaQuery();
 
   return (
-    <div className="w-full">
+    <div className="">
       <Link to={`/projetos?query=${title}`}>
         <Card3D hideBall={isSmallScreen} image={image} />
       </Link>
