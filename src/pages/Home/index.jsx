@@ -1,4 +1,3 @@
-
 import Wrapper from "../../components/Wrapper";
 import Hero from "./components/Hero";
 import ProjectSection from "./components/ProjectSection";
@@ -11,7 +10,7 @@ function App() {
     <>
       <div className="font-azeret-mono flex h-full w-full flex-col justify-start">
         <Wrapper>
-          <div className="mt-10 space-y-10">
+          <div className="space-y-10">
             <Hero />
             <ServiceSection />
             <ProjectSection />

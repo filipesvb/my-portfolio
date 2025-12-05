@@ -8,7 +8,7 @@ import GithubLink from "./components/GithubLink";
 import { motion } from "framer-motion";
 import { CardContainer } from "@/components/ui/shadcn-io/3d-card";
 import { useState } from "react";
-import { Folder, Image } from "lucide-react";
+import { Folder, Image, Pointer } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 interface ProjectSingleProps {
@@ -76,22 +76,15 @@ const ProjectSingle = ({
 
         {/* FRENTE */}
         <div className="growth-0 translate-z-0 bg-background backface-hidden relative flex h-full w-full flex-col space-y-20 rounded-lg py-2 md:py-0">
-          <motion.div
-            animate={{ opacity: 1 }}
-            initial={{ opacity: 0 }}
-            className="absolute right-2 top-2 shadow-2xl"
-            viewport={{ once: true }}
-            transition={{ duration: 1.6 }}
+          <Button
+            variant={"outline"}
+            size={"icon"}
+            className="bg-background border-foreground absolute right-2 top-2 flex rounded-full shadow-2xl md:hidden"
+            onClick={handleFlip}
           >
-            <Button
-              variant={"outline"}
-              size={"icon"}
-              className="bg-background border-foreground flex rounded-full md:hidden"
-              onClick={handleFlip}
-            >
-              <Image className="stroke-foreground" size={32} />
-            </Button>
-          </motion.div>
+            <Image className="stroke-foreground" size={32} />
+          </Button>
+
           <div className="w-full px-4">
             <CardTitle className="text-foreground text-left text-[2rem]">
               {title}
