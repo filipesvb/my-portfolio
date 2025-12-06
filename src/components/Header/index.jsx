@@ -25,9 +25,9 @@ const Header = () => {
   const locationIsHome = pathname == "/";
 
   return (
-    <header className="font-inter w-full py-5">
+    <header className="font-inter w-full">
       <Wrapper>
-        <div className="hidden w-full justify-between md:block">
+        <div className="mb-3 hidden w-full justify-between md:block">
           <div className="flex flex-row items-center justify-between">
             <Menu variant={"md"} />
             <div className="flex gap-4">
@@ -54,7 +54,7 @@ const Header = () => {
         </div>
 
         <div
-          className={`flex items-center ${!locationIsHome ? "justify-between" : "justify-end"} md:hidden`}
+          className={`flex items-center py-2 ${!locationIsHome ? "justify-between" : "justify-end"} md:hidden`}
         >
           {!locationIsHome && (
             <Link to={"/"} className="">

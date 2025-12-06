@@ -17,10 +17,10 @@ const Card3D = ({
 }) => {
   return (
     <CardContainer
-      className="inter-var w-full md:w-auto"
+      className="inter-var w-full md:w-full"
       containerClassName="py-0 md:py-2"
     >
-      <CardBody className="group/card relative h-[500px] md:h-auto md:w-40 md:min-w-[18rem]">
+      <CardBody className="group/card relative h-[500px] w-full md:h-auto md:min-w-[18rem]">
         <HoverableWithBall
           hideBall={hideBall}
           ballText="Veja mais"

@@ -10,8 +10,8 @@ const HeroCTA = ({
   ctaTxt: string;
 }) => {
   return (
-    <div className="flex flex-col items-center space-y-3 md:items-start">
-      <h3 className="text-foreground text-2xl font-bold leading-none">
+    <div className="flex flex-col items-center space-y-8 md:items-start">
+      <h3 className="text-foreground text-xl leading-none font-bold">
         {orcamentoTxt}
       </h3>
       <Link to={"/contato"}>

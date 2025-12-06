@@ -10,7 +10,7 @@ function App() {
     <>
       <div className="font-azeret-mono flex h-full w-full flex-col justify-start">
         <Wrapper>
-          <div className="space-y-10">
+          <div className="h-full space-y-10">
             <Hero />
             <ServiceSection />
             <ProjectSection />
