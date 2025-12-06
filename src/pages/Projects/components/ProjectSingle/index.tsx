@@ -77,6 +77,14 @@ const ProjectSingle = ({
         {/* FRENTE */}
         <div className="growth-0 bg-background relative flex h-full w-full translate-z-0 flex-col space-y-20 rounded-lg py-2 backface-hidden md:py-0">
           <div className="w-full px-4">
+            <Button
+              variant={"outline"}
+              size={"icon"}
+              className="bg-background border-foreground absolute right-2 bottom-2 z-3 flex rounded-full shadow-2xl md:hidden"
+              onClick={handleFlip}
+            >
+              <Image className="stroke-foreground" size={32} />
+            </Button>
             <CardTitle className="text-foreground text-left text-[2rem]">
               {title}
             </CardTitle>
@@ -93,14 +101,6 @@ const ProjectSingle = ({
             <Magnetic>
               <GithubLink link={links.github} />
             </Magnetic>
-            <Button
-              variant={"outline"}
-              size={"icon"}
-              className="bg-background border-foreground absolute right-2 bottom-2 flex rounded-full shadow-2xl md:hidden"
-              onClick={handleFlip}
-            >
-              <Image className="stroke-foreground" size={32} />
-            </Button>
           </div>
         </div>
 
