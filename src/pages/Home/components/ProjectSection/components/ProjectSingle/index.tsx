@@ -15,10 +15,8 @@ const ProjectSingle = ({ title, description, image }: Project) => {
   const isSmallScreen = useMediaQuery();
 
   return (
-    <div className="">
-      <Link to={`/projetos?query=${title}`}>
-        <Card3D hideBall={isSmallScreen} image={image} />
-      </Link>
+    <div className="flex w-full flex-col md:max-w-[300px]">
+      <Card3D hideBall={isSmallScreen} image={image} title={title} />
       <CardTitle className="text-foreground">{title}</CardTitle>
       <p className="whitespace-wrap text-muted-foreground w-full">
         {description}

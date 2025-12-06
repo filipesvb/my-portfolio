@@ -7,7 +7,7 @@ const HeroText = () => {
   const { t } = useTranslation("hero");
 
   return (
-    <div className="flex-2/5 flex flex-col space-y-12">
+    <div className="flex flex-2/5 flex-col space-y-6 md:space-y-12">
       <NameCard card_job={t("hero_card_job")} />
       <AnimatedText
         textArr={[

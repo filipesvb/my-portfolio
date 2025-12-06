@@ -7,7 +7,7 @@ export default function AboutMe({ compact = false }) {
   const { t } = useTranslation("aboutMe");
 
   return (
-    <section className="prose prose-lg mx-auto max-w-3xl text-white">
+    <section className="prose prose-lg mx-auto flex h-full max-w-3xl flex-col justify-between">
       <Trans
         i18nKey={
           compact ? "aboutMe:presentation.compact" : "aboutMe:presentation.full"
