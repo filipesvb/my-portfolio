@@ -17,12 +17,12 @@ const LanguageSelect = ({ selectedOption, selectOption }) => {
   };
 
   return (
-    <div className="flex items-center relative ">
+    <div className="relative flex items-center">
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
           <Button
             variant={"outline"}
-            className=" focus:text-foreground cursor-pointer group border-foreground hover:bg-foreground dark:hover:bg-foreground"
+            className="focus:text-foreground border-foreground hover:bg-foreground dark:hover:bg-foreground group cursor-pointer"
           >
             <div className="flex items-center gap-2">
               <span className="group-hover:text-background text-foreground">
@@ -33,38 +33,37 @@ const LanguageSelect = ({ selectedOption, selectOption }) => {
           </Button>
         </DropdownMenuTrigger>
         <DropdownMenuContent
-          className="border-foreground rounded-xl overflow-hidden p-0 bg-background"
+          className="border-foreground bg-background overflow-hidden rounded-xl p-0"
           side="bottom"
         >
-          <ul className="flex-col flex items-center">
+          <ul className="flex flex-col items-center">
             {supportedLngs.map((language, i) => (
-            <>
-            
-              <DropdownMenuItem
-                asChild
-                className="hover:bg-transparent p-0 hover:text-inherit focus:bg-transparent focus:text-inherit rounded-none "
-              >
-                <li
-                  className={`select-none text-center  w-full flex-col group `}
+              <div key={language} className="w-full">
+                <DropdownMenuItem
+                  asChild
+                  className="rounded-none p-0 hover:bg-transparent hover:text-inherit focus:bg-transparent focus:text-inherit"
                 >
-                  <button
-                    className="cursor-pointer py-3 px-4 w-full group-hover:bg-foreground hover:text-background transition-colors duration-200 "
-                    onClick={() => {
-                      handleSelectOption(language);
-                    }}
+                  <li
+                    className={`group w-full select-none flex-col text-center`}
                   >
-                    <span className="text-foreground group-hover:text-background">{language.toUpperCase()}</span>
-                  </button>
-                  
-                </li>
-              </DropdownMenuItem>
-              {i !== supportedLngs.length - 1 && (
-                <div className=" text-red-400 w-full flex justify-center">
-                  <hr className="text-red-300  border-t-muted-foreground w-10/10 " />
-                </div>
-              )}
-          </>
-          
+                    <button
+                      className="group-hover:bg-foreground hover:text-background w-full cursor-pointer px-4 py-3 transition-colors duration-200"
+                      onClick={() => {
+                        handleSelectOption(language);
+                      }}
+                    >
+                      <span className="text-foreground group-hover:text-background">
+                        {language.toUpperCase()}
+                      </span>
+                    </button>
+                  </li>
+                </DropdownMenuItem>
+                {i !== supportedLngs.length - 1 && (
+                  <div className="flex w-full justify-center text-red-400">
+                    <hr className="border-t-muted-foreground w-10/10 text-red-300" />
+                  </div>
+                )}
+              </div>
             ))}
           </ul>
         </DropdownMenuContent>

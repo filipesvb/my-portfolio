@@ -9,6 +9,7 @@ const ServicesContainer = () => {
     <div className="flex w-full flex-col gap-10 overflow-x-hidden md:flex-row">
       {services.map((service, i) => (
         <ServiceSingle
+          key={service.id}
           title={t(`section_cards.${service.id}.title`)}
           description={t(`section_cards.${service.id}.description`)}
           image={service.image}

@@ -1,12 +1,12 @@
-import { techstack, TechKey } from '../../../../data/techstack';
-import TechIcon from './TechIcon';
+import { techstack, TechKey } from "../../../../data/techstack";
+import TechIcon from "./TechIcon";
 
 const MyTechStack = () => {
   return (
-    <div className="max-w-400 grid grid-cols-3 md:grid-cols-5 columns-2xl gap-2">
+    <div className="max-w-400 grid columns-2xl grid-cols-3 gap-2 md:grid-cols-5">
       {Object.entries(techstack).map(([key, tech]) => {
         const Icon = tech.image;
-        return <TechIcon tech={tech} />;
+        return <TechIcon key={key} tech={tech} />;
       })}
     </div>
   );

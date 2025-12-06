@@ -38,44 +38,41 @@ const Menu = ({ variant = "" }) => {
   return (
     <nav className="">
       <div>
-        {menuClassName[variant] ? <DesktopMenu t={t} variantStyle={menuClassName[variant]} /> : <MobileMenu t={t} />}
+        {menuClassName[variant] ? (
+          <DesktopMenu t={t} variantStyle={menuClassName[variant]} />
+        ) : (
+          <MobileMenu t={t} />
+        )}
       </div>
     </nav>
   );
 };
 
-const DesktopMenu = ({t, variantStyle}) => {
+const DesktopMenu = ({ t, variantStyle }) => {
   return (
     <div className={`flex w-full gap-6 ${variantStyle}`}>
       {menuOptions.map((opt, i) => {
-        const content = (
-          <Link to={`/${opt.to}`} className="flex gap-1">
-            <span className="group-hover:text-background transition-colors duration-300 text-foreground">
+        return (
+          <Link key={opt.value} to={`/${opt.to}`} className="flex gap-1">
+            <span className="group-hover:text-background text-foreground transition-colors duration-300">
               {t(`${opt.value}`)}
             </span>
           </Link>
         );
-
-        return (
-          <>
-            {content}
-          </>
-        );
-      
       })}
     </div>
-  )
-}
+  );
+};
 
 const MobileMenu = ({ t }) => {
   return (
-    <div className="px-4 space-y-2">
+    <div className="space-y-2 px-4">
       {menuOptions.map((opt, i) => {
         const Icon = opt.icon;
         const content = (
-          <Link to={`/${opt.to}`} className="bg-muted-background ">
-            <Icon className="group-hover:stroke-background transition-colors duration-300 stroke-foreground" />
-            <span className="group-hover:text-background transition-colors duration-300 text-foreground">
+          <Link to={`/${opt.to}`} className="bg-muted-background">
+            <Icon className="group-hover:stroke-background stroke-foreground transition-colors duration-300" />
+            <span className="group-hover:text-background text-foreground transition-colors duration-300">
               {t(`${opt.value}`)}
             </span>
           </Link>
@@ -86,11 +83,9 @@ const MobileMenu = ({ t }) => {
             variant={"outline"}
             asChild
             key={`${opt.value}`}
-            className="flex justify-start border-muted-foreground group hover:bg-foreground dark:hover:bg-foreground"
+            className="border-muted-foreground hover:bg-foreground dark:hover:bg-foreground group flex justify-start"
           >
-            {<SheetClose asChild>
-              {content}
-            </SheetClose>}
+            {<SheetClose asChild>{content}</SheetClose>}
           </Button>
         );
       })}

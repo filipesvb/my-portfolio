@@ -1,4 +1,4 @@
-import  Linkedin from "@/assets/icons/socials/linkedin.svg?react";
+import Linkedin from "@/assets/icons/socials/linkedin.svg?react";
 import Github from "@/assets/icons/socials/github.svg?react";
 import { Link } from "react-router";
 
@@ -17,19 +17,22 @@ const socials = [
 
 const SocialList = () => {
   return (
-    <div className="flex flex-col md:flex-row  items-start justify-start">
+    <div className="flex flex-col items-start justify-start md:flex-row">
       {socials.map((s) => {
         const Icon = s.icon;
         return (
           <Link
+            key={s.title}
             target="_blank"
             to={s.to}
-            className="group px-3 flex flex-row items-center w-full gap-4 md:gap-2  py-5 border-t md:border-none border-muted-foreground hover:bg-foreground transition-colors duration-300 text-foreground"
+            className="border-muted-foreground hover:bg-foreground text-foreground group flex w-full flex-row items-center gap-4 border-t px-3 py-5 transition-colors duration-300 md:gap-2 md:border-none"
           >
             <div className="flex-2/10">
-              <Icon className="fill-foreground group-hover:fill-background w-12  h-12 md:w-6 md:y-6"/>
+              <Icon className="fill-foreground group-hover:fill-background md:y-6 h-12 w-12 md:w-6" />
             </div>
-            <span className="text-foreground font-medium text-md tracking-wide flex-8/10 group-hover:text-background">{s.title}</span>
+            <span className="text-foreground text-md flex-8/10 group-hover:text-background font-medium tracking-wide">
+              {s.title}
+            </span>
           </Link>
         );
       })}

@@ -60,7 +60,7 @@ const ContactForm = () => {
       className="flex flex-col gap-5 p-8 text-black"
       onSubmit={handleSubmit}
     >
-      <fieldset className="md:grid md:grid-cols-2 md:grid-rows-2 flex flex-col gap-4">
+      <fieldset className="flex flex-col gap-4 md:grid md:grid-cols-2 md:grid-rows-2">
         <label className="">
           <LabelWrapper>{t("form.name.label")}</LabelWrapper>
           <InputWrapper>
@@ -107,16 +107,16 @@ const ContactForm = () => {
           <LabelWrapper>{t("form.assunto.label")}</LabelWrapper>
           <InputWrapper className="pr-2">
             <select
-              className={` h-full w-full border-0 outline-0 text-black dark:text-black ${formInputStyle}`}
+              className={`h-full w-full border-0 text-black outline-0 dark:text-black ${formInputStyle}`}
               onChange={(e) => {
                 setSubject(e.target.value);
               }}
               required
+              defaultValue={"default"}
             >
               <option
                 className="text-black dark:text-black"
                 value="default"
-                selected
                 disabled
               >
                 {t("form.assunto.placeholder")}
@@ -145,8 +145,8 @@ const ContactForm = () => {
         />
       </fieldset>
       <fieldset>
-        <Magnetic className=" w-full md:w-auto">
-          <FormButton>{t('form.enviar')}</FormButton>
+        <Magnetic className="w-full md:w-auto">
+          <FormButton>{t("form.enviar")}</FormButton>
         </Magnetic>
       </fieldset>
     </form>
