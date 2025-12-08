@@ -1,9 +1,8 @@
-import HoverableWithBall from "@/components/HoverableWithBall";
 import CardTitle from "../../../../../../components/CardTitle";
 
 import Card3D from "@/components/Card3D";
 import useMediaQuery from "@/hooks/useMediaQuery";
-import { Link } from "react-router";
+import { useTranslation } from "react-i18next";
 
 type Project = {
   title: string;
@@ -12,6 +11,8 @@ type Project = {
 };
 
 const ProjectSingle = ({ title, description, image }: Project) => {
+  const { t } = useTranslation("project_section");
+
   const isSmallScreen = useMediaQuery();
 
   return (

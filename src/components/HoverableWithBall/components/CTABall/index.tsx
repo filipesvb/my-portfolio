@@ -4,7 +4,7 @@ interface CTABallProps {
   active: boolean,
   x: number,
   y: number,
-  text: string
+  text: string | undefined
 }
 
 const CTABall = ({active, x, y, text} : CTABallProps) => {
