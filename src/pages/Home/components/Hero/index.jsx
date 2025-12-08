@@ -11,7 +11,7 @@ const Hero = () => {
       <HeroImageContainer />
       <Button
         size={"icon"}
-        className="border-foreground mx-auto mb-4 animate-bounce rounded-full border-2"
+        className="border-foreground mx-auto mb-4 animate-bounce rounded-full border-2 md:hidden"
       >
         <ArrowDown />
       </Button>

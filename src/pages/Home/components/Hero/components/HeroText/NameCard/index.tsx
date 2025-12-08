@@ -7,7 +7,7 @@ const NameCard = ({ card_job }: { card_job: string }) => {
       <div className="relative w-full md:hidden">
         <img
           src={Me}
-          className="absolute -top-36 right-[50%] w-1/2 translate-x-1/2 rounded-full"
+          className="absolute -top-36 right-[50%] w-1/2 max-w-60 translate-x-1/2 rounded-full"
         />
       </div>
       <div className="relative flex items-center py-1">
@@ -17,7 +17,7 @@ const NameCard = ({ card_job }: { card_job: string }) => {
           <div className="h-2 w-2 rounded bg-[#1B9130]"></div>
         </div>
       </div>
-      <div className="dark:text-foreground z-2 w-full pl-4 text-[3em] leading-none font-black text-white md:text-[4em]">
+      <div className="dark:text-foreground z-2 w-full pl-4 text-[3em] font-black leading-none text-white md:text-[4em]">
         Filipe
         <br />
         Vilas Bôas
