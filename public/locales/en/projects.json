@@ -7,20 +7,15 @@
       "shortDescription": "Portfolio created to showcase my skills and projects I have developed.",
       "longDescription": "This portfolio was built to highlight my technical expertise and the projects I have worked on throughout my development journey. Developed with React and bundled using Vite, it leverages TailwindCSS for styling, Shadcn for reusable and high-performance components, i18next for multilingual support, and Framer Motion for dynamic animations and transitions."
     },
-    "project2": {
-      "title": "LinguaPlay",
-      "shortDescription": "Educational game for learning languages through play.",
-      "longDescription": "LinguaPlay is an interactive game built with React and Phaser.js, aimed at children and teenagers learning English and Spanish. The level and challenge system uses voice recognition and playful animations to make learning fun. The project was designed to work offline and be used on school tablets."
+    "barbershop": {
+      "title": "Barbershop Aparatus - FSW",
+      "shortDescription": "Barbershop webapp with booking, authentication, and routing, built using Next.js, Tailwind, Shadcn/UI, Zod, PostgreSQL, and Prisma.",
+      "longDescription": "A complete barbershop web application developed during Fullstack Week, featuring appointment scheduling, authentication, and dynamic routing. Built with Next.js for high performance, styled using Tailwind CSS, and enhanced with Shadcn/UI components for a modern and accessible interface. Data validation is handled by Zod, ensuring security and reliability. On the backend, it uses PostgreSQL integrated with Prisma ORM, providing efficient and type-safe queries. This project showcases best practices and modern technologies to deliver a scalable and seamless user experience."
     },
-    "project3": {
-      "title": "BudgetBuddy",
-      "shortDescription": "Personal finance organizer focused on credit cards.",
-      "longDescription": "BudgetBuddy is a web app that helps users manage credit card expenses by categorizing purchases and alerting about due dates. Built with React, Zustand, and TailwindCSS, the app integrates with spreadsheets and supports PDF export. Ideal for young adults starting to organize their finances."
-    },
-    "project4": {
-      "title": "Interactive Portfolio",
-      "shortDescription": "Portfolio with visual effects and multilingual support.",
-      "longDescription": "This project is a personal portfolio developed with Vite, React, and i18next, focusing on accessibility and interactivity. It includes a yellow ball that follows the cursor, smooth animations with Framer Motion, and a Scroll Area with organized projects. The site is responsive and SEO-optimized, deployed on Netlify."
+    "hora-mundi": {
+      "title": "Hora Mundi",
+      "shortDescription": "Simple website built with JavaScript, HTML, and CSS, showing the current time worldwide using UTC logic. Includes Day.js for date handling and Micromodal for modals.",
+      "longDescription": "Simple website built with JavaScript, HTML, and pure CSS to display the current time around the world using UTC logic. Utilizes Day.js for date handling and Micromodal for accessible modals. A minimal and responsive project focused on functionality and accuracy."
     }
   },
   "filter": {

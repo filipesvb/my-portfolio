@@ -6,6 +6,15 @@ import ViteIcon from "@/assets/icons/vite.svg?react";
 import I18NextIcon from "@/assets/icons/i18next.svg?react";
 import TypescriptIcon from "@/assets/icons/typescript.svg?react";
 import NetlifyIcon from "@/assets/icons/netlify.svg?react";
+import PrismaIcon from "@/assets/icons/prisma.svg?react";
+import ZodIcon from "@/assets/icons/zod.svg?react";
+import ExpressIcon from "@/assets/icons/express.svg?react";
+import ESLintIcon from "@/assets/icons/eslint.svg?react";
+import PostgreSQLIcon from "@/assets/icons/postgresql.svg?react";
+import JavascriptIcon from "@/assets/icons/javascript.svg?react";
+import HTMLIcon from "@/assets/icons/html5.svg?react";
+import CSSIcon from "@/assets/icons/css.svg?react";
+
 import { ComponentType, SVGProps } from "react";
 
 export type Technology = {
@@ -22,6 +31,9 @@ export type Technology = {
 export type TechKey = keyof typeof techstack;
 
 export enum tagValues {
+  JAVASCRIPT = "javascript",
+  HTML = "html",
+  CSS = "css",
   REACT = "react",
   FIREBASE = "firebase",
   NETLIFY = "netlify",
@@ -33,6 +45,11 @@ export enum tagValues {
   I18NEXT = "i18next",
   FRAMER_MOTION = "framer_motion",
   NEXTJS = "nextjs",
+  PRISMA = "prisma",
+  ZOD = "zod",
+  EXPRESS = "express",
+  ESLINT = "eslint",
+  POSTGRESQL = "postgresql",
 }
 
 export const techstack: Partial<Record<tagValues, Technology>> = {
@@ -146,4 +163,84 @@ export const techstack: Partial<Record<tagValues, Technology>> = {
   //     text: '#ffffff',
   //   },
   // } as Technology,
+  [tagValues.PRISMA]: {
+    image: PrismaIcon,
+    title: "PrismaORM",
+    value: tagValues.PRISMA,
+    category: "backend",
+    style: {
+      bg: "#2D3748",
+      text: "#f9f9f9",
+    },
+  } as Technology,
+  [tagValues.ZOD]: {
+    image: ZodIcon,
+    title: "Zod",
+    value: tagValues.ZOD,
+    category: "frontend",
+    style: {
+      bg: "#408AFF",
+      text: "#f9f9f9",
+    },
+  } as Technology,
+  [tagValues.EXPRESS]: {
+    image: ExpressIcon,
+    title: "Express",
+    value: tagValues.EXPRESS,
+    category: "backend",
+    style: {
+      bg: "#000000",
+      text: "#f9f9f9",
+    },
+  } as Technology,
+  [tagValues.ESLINT]: {
+    image: ESLintIcon,
+    title: "ESLint",
+    value: tagValues.ESLINT,
+    category: "fullstack",
+    style: {
+      bg: "#4B32C3",
+      text: "#f9f9f9",
+    },
+  } as Technology,
+  [tagValues.POSTGRESQL]: {
+    image: PostgreSQLIcon,
+    title: "PostgreSQL",
+    value: tagValues.POSTGRESQL,
+    category: "backend",
+    style: {
+      bg: "#4169E1",
+      text: "#f9f9f9",
+    },
+  } as Technology,
+  [tagValues.JAVASCRIPT]: {
+    image: JavascriptIcon,
+    title: "Javascript",
+    value: tagValues.JAVASCRIPT,
+    category: "fullstack",
+    style: {
+      bg: "#F7DF1E",
+      text: "#f9f9f9",
+    },
+  } as Technology,
+  [tagValues.HTML]: {
+    image: HTMLIcon,
+    title: "HTML",
+    value: tagValues.HTML,
+    category: "frontend",
+    style: {
+      bg: "#E34F26",
+      text: "#f9f9f9",
+    },
+  } as Technology,
+  [tagValues.CSS]: {
+    image: CSSIcon,
+    title: "CSS",
+    value: tagValues.CSS,
+    category: "frontend",
+    style: {
+      bg: "#663399",
+      text: "#f9f9f9",
+    },
+  } as Technology,
 };
