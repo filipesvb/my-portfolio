@@ -27,7 +27,7 @@ const Header = () => {
   return (
     <header className="font-inter w-full">
       <Wrapper>
-        <div className="mb-3 hidden w-full justify-between md:block">
+        <div className="mb-3 hidden w-full justify-between md:block md:py-2">
           <div className="flex flex-row items-center justify-between">
             <Menu variant={"md"} />
             <div className="flex gap-4">

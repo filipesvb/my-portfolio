@@ -53,9 +53,14 @@ const DesktopMenu = ({ t, variantStyle }) => {
     <div className={`flex w-full gap-6 ${variantStyle}`}>
       {menuOptions.map((opt, i) => {
         return (
-          <Link key={opt.value} to={`/${opt.to}`} className="flex gap-1">
-            <span className="group-hover:text-background text-foreground transition-colors duration-300">
+          <Link
+            key={opt.value}
+            to={`/${opt.to}`}
+            className="group relative flex gap-1"
+          >
+            <span className="text-foreground relative transition-colors duration-300">
               {t(`${opt.value}`)}
+              <span className="bg-foreground absolute bottom-0 left-0 h-[1px] w-0 transition-all duration-200 group-hover:w-full"></span>
             </span>
           </Link>
         );
