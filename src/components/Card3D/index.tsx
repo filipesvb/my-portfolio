@@ -8,22 +8,25 @@ const Card3D = ({
   height,
   hideBallText,
   image,
+  imagePosition,
   title,
 }: {
   width?: string;
   height?: string;
   hideBallText: boolean;
   image?: string;
+  imagePosition?: string;
   title?: string;
 }) => {
   const { t } = useTranslation("project_section");
+  const hasToBeCentered = imagePosition === "center";
 
   return (
     <CardContainer
       className="inter-var w-full md:w-full"
       containerClassName="py-0 md:py-2"
     >
-      <CardBody className="group/card relative h-[500px] w-full md:h-auto md:min-w-[18rem]">
+      <CardBody className="group/card relative h-[600px] w-full md:h-auto md:min-w-[18rem]">
         <HoverableWithBall
           hideBallText={hideBallText}
           ballText={t("project_single_hoverball_text")}
@@ -35,7 +38,7 @@ const Card3D = ({
             >
               <img
                 src={image}
-                className="h-full w-full object-cover object-top"
+                className={`h-full w-full object-cover ${hasToBeCentered ? "object-center" : "object-top"}`}
               />
             </div>
           </Link>

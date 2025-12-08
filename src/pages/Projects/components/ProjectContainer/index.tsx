@@ -29,6 +29,7 @@ const ProjectContainer = ({
               tags={p.tags}
               links={p.links}
               image={p.image}
+              imagePosition={p.imagePosition}
             />
           );
         })

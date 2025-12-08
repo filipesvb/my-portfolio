@@ -6,7 +6,7 @@ import HoraMundi from "@/assets/projects/images/HoraMundi.png";
 export type Project = {
   id: string;
   image: string;
-
+  imagePosition: "top" | "center";
   links: {
     github: string;
     live: string;
@@ -18,6 +18,7 @@ export const projects: Project[] = [
   {
     id: "project1",
     image: MyPortfolioImage,
+    imagePosition: "top",
     links: {
       github: "https://github.com/filipesvb/my-portfolio",
       live: "https://filipevilasboas.netlify.app",
@@ -34,6 +35,7 @@ export const projects: Project[] = [
   {
     id: "barbershop",
     image: Barbershop,
+    imagePosition: "top",
     links: {
       github: "https://github.com/filipesvb/app-barber-fsw",
       live: "",
@@ -51,6 +53,7 @@ export const projects: Project[] = [
   {
     id: "hora-mundi",
     image: HoraMundi,
+    imagePosition: "center",
     links: {
       github: "https://github.com/filipesvb/hora-mundi/tree/main",
       live: "https://filipesvb.github.io/hora-mundi/",
