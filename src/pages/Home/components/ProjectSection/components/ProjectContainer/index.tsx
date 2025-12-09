@@ -16,6 +16,7 @@ const ProjectContainer = () => {
               title={t(`projects.${p.id}.title`)}
               description={t(`projects.${p.id}.shortDescription`)}
               image={p.image}
+              imagePosition={p.imagePosition}
             />
           ))}
         </div>

@@ -8,16 +8,27 @@ type Project = {
   title: string;
   description: string;
   image: string;
+  imagePosition: string;
 };
 
-const ProjectSingle = ({ title, description, image }: Project) => {
+const ProjectSingle = ({
+  title,
+  description,
+  image,
+  imagePosition,
+}: Project) => {
   const { t } = useTranslation("project_section");
 
   const isSmallScreen = useMediaQuery();
 
   return (
     <div className="flex w-full flex-col md:max-w-[300px]">
-      <Card3D hideBall={isSmallScreen} image={image} title={title} />
+      <Card3D
+        hideBallText={isSmallScreen}
+        image={image}
+        title={title}
+        imagePosition={imagePosition}
+      />
       <CardTitle className="text-foreground">{title}</CardTitle>
       <p className="whitespace-wrap text-muted-foreground w-full">
         {description}

@@ -1,9 +1,9 @@
 import { useTranslation } from "react-i18next";
-import MenuButton from "./MenuButton"
+import MenuButton from "./MenuButton";
 import { useEffect, useState } from "react";
+import { motion } from "motion/react";
 
-const ScrollAwareMenuButton =() => {
-
+const ScrollAwareMenuButton = () => {
   const { i18n } = useTranslation();
   const [language, setLanguage] = useState(i18n.language);
   const [showButton, setShowButton] = useState(false);
@@ -16,7 +16,7 @@ const ScrollAwareMenuButton =() => {
   useEffect(() => {
     const handleScroll = () => {
       // Show button only if scrolled down 100px
-      if (window.scrollY > 200) {
+      if (window.scrollY > 400) {
         setShowButton(true);
       } else {
         setShowButton(false);
@@ -28,14 +28,15 @@ const ScrollAwareMenuButton =() => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  
   return (
-
-    
-    <div className={`fixed top-5 right-3 animation transition-all duration-300  ${showButton ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4 pointer-events-none"}`}>
+    showButton && <motion.div
+      className={`animation fixed right-3 top-0 transition-all duration-300`}
+      initial={{ opacity: 0, translateY: "32px" }}
+      animate={{ opacity: 1, translateY: "12px" }}
+    >
       <MenuButton language={language} changeLanguage={changeLanguage} />
-    </div>
-  )
-}
+    </motion.div>
+  );
+};
 
-export default ScrollAwareMenuButton
+export default ScrollAwareMenuButton;
