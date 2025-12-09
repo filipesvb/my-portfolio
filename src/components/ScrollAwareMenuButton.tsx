@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
 import MenuButton from "./MenuButton";
 import { useEffect, useState } from "react";
-import { motion } from "motion/react";
+import { motion, AnimatePresence } from "motion/react";
 
 const ScrollAwareMenuButton = () => {
   const { i18n } = useTranslation();
@@ -29,13 +29,19 @@ const ScrollAwareMenuButton = () => {
   }, []);
 
   return (
-    showButton && <motion.div
-      className={`animation fixed right-3 top-0 transition-all duration-300`}
-      initial={{ opacity: 0, translateY: "32px" }}
-      animate={{ opacity: 1, translateY: "12px" }}
-    >
-      <MenuButton language={language} changeLanguage={changeLanguage} />
-    </motion.div>
+    <AnimatePresence mode="wait">
+      {showButton && (
+        <motion.div
+          className={`animation fixed top-2`}
+          initial={{ opacity: 0, right: -30 }}
+          animate={{ opacity: 1, right: 18 }}
+          exit={{ opacity: 0, right: -30 }}
+          transition={{ duration: 0.7, type: "spring" }}
+        >
+          <MenuButton language={language} changeLanguage={changeLanguage} />
+        </motion.div>
+      )}
+    </AnimatePresence>
   );
 };
 

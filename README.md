@@ -13,7 +13,7 @@
 
 ---
 
-## English
+## English 
 
 ### About
 
@@ -61,51 +61,6 @@ A modern, responsive personal portfolio website built with React and Vite. Featu
 ├── package.json
 └── vite.config.js
 ```
-
-### Getting Started
-
-#### Prerequisites
-
-- Node.js 18+ 
-- npm or yarn
-
-#### Installation
-
-1. Clone the repository:
-```bash
-git clone https://github.com/yourusername/my-portfolio.git
-cd my-portfolio
-```
-
-2. Install dependencies:
-```bash
-npm install
-```
-
-3. Start the development server:
-```bash
-npm run dev
-```
-
-4. Open your browser at `http://localhost:5000`
-
-### Available Scripts
-
-| Command | Description |
-|---------|-------------|
-| `npm run dev` | Start development server |
-| `npm run build` | Build for production |
-| `npm run preview` | Preview production build |
-| `npm run lint` | Run ESLint |
-
-### Adding Translations
-
-To add or modify translations, edit the JSON files in `public/locales/`:
-
-- `public/locales/en/translation.json` - English translations
-- `public/locales/pt/translation.json` - Portuguese translations
-
----
 
 ## Português
 
@@ -156,61 +111,7 @@ Um site de portfólio pessoal moderno e responsivo, construído com React e Vite
 └── vite.config.js
 ```
 
-### Como Começar
 
-#### Pré-requisitos
-
-- Node.js 18+
-- npm ou yarn
-
-#### Instalação
-
-1. Clone o repositório:
-```bash
-git clone https://github.com/yourusername/my-portfolio.git
-cd my-portfolio
-```
-
-2. Instale as dependências:
-```bash
-npm install
-```
-
-3. Inicie o servidor de desenvolvimento:
-```bash
-npm run dev
-```
-
-4. Abra seu navegador em `http://localhost:5000`
-
-### Scripts Disponíveis
-
-| Comando | Descrição |
-|---------|-----------|
-| `npm run dev` | Inicia o servidor de desenvolvimento |
-| `npm run build` | Gera build para produção |
-| `npm run preview` | Pré-visualiza build de produção |
-| `npm run lint` | Executa o ESLint |
-
-### Adicionando Traduções
-
-Para adicionar ou modificar traduções, edite os arquivos JSON em `public/locales/`:
-
-- `public/locales/en/translation.json` - Traduções em Inglês
-- `public/locales/pt/translation.json` - Traduções em Português
-
----
-
-<div align="center">
-
-### License / Licença
-
-MIT License - Feel free to use this project as a template for your own portfolio.
-
-MIT License - Sinta-se à vontade para usar este projeto como template para seu próprio portfólio.
-
----
-
-Made with ❤️ by Filipe Vilas Bôas
+Made by Filipe Vilas Bôas
 
 </div>
