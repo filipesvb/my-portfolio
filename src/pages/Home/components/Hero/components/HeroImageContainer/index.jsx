@@ -11,8 +11,8 @@ const HeroImageContainer = () => {
           className="relative h-full w-full rounded-full"
         >
           <div className="pointer-events-none absolute left-0 top-0 h-full w-full">
-            <div className="relative h-full w-full overflow-hidden rounded-full">
-              <img src={Me} className="absolute left-0 top-0" />
+            <div className="relative flex h-full w-full items-center overflow-hidden rounded-full">
+              <img src={Me} className="rounded-full" />
             </div>
           </div>
         </HoverableWithBall>
