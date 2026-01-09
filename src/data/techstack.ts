@@ -14,6 +14,9 @@ import PostgreSQLIcon from "@/assets/icons/postgresql.svg?react";
 import JavascriptIcon from "@/assets/icons/javascript.svg?react";
 import HTMLIcon from "@/assets/icons/html5.svg?react";
 import CSSIcon from "@/assets/icons/css.svg?react";
+import WordpressIcon from "@/assets/icons/wordpress.svg?react";
+import ElementorIcon from "@/assets/icons/elementor.svg?react";
+import FigmaIcon from "@/assets/icons/figma.svg?react";
 
 import { ComponentType, SVGProps } from "react";
 
@@ -50,6 +53,9 @@ export enum tagValues {
   EXPRESS = "express",
   ESLINT = "eslint",
   POSTGRESQL = "postgresql",
+  WORDPRESS = "wordpress",
+  ELEMENTOR = "elementor",
+  FIGMA = "figma",
 }
 
 export const techstack: Partial<Record<tagValues, Technology>> = {
@@ -240,6 +246,36 @@ export const techstack: Partial<Record<tagValues, Technology>> = {
     category: "frontend",
     style: {
       bg: "#663399",
+      text: "#f9f9f9",
+    },
+  } as Technology,
+  [tagValues.WORDPRESS]: {
+    image: WordpressIcon,
+    title: "Wordpress",
+    value: tagValues.WORDPRESS,
+    category: "fullstack",
+    style: {
+      bg: "#21759B",
+      text: "#f9f9f9",
+    },
+  } as Technology,
+  [tagValues.ELEMENTOR]: {
+    image: ElementorIcon,
+    title: "Elementor",
+    value: tagValues.ELEMENTOR,
+    category: "frontend",
+    style: {
+      bg: "#92003B",
+      text: "#f9f9f9",
+    },
+  } as Technology,
+  [tagValues.FIGMA]: {
+    image: FigmaIcon,
+    title: "Figma",
+    value: tagValues.FIGMA,
+    category: "frontend",
+    style: {
+      bg: "#F24E1E",
       text: "#f9f9f9",
     },
   } as Technology,

@@ -1,7 +1,8 @@
 import { techstack, TechKey, Technology, tagValues } from "./techstack";
 import MyPortfolioImage from "@/assets/projects/images/myportfolio.png";
 import Barbershop from "@/assets/projects/images/Barbershop.png";
-import HoraMundi from "@/assets/projects/images/HoraMundi.png";
+import EntreTrilhas from "@/assets/projects/images/entreTrilhas.png";
+import SuperMilk from "@/assets/projects/images/supermilk.png";
 
 export type Project = {
   id: string;
@@ -51,13 +52,33 @@ export const projects: Project[] = [
     ],
   },
   {
-    id: "hora-mundi",
-    image: HoraMundi,
-    imagePosition: "center",
+    id: "entre-trilhas",
+    image: EntreTrilhas,
+    imagePosition: "top",
     links: {
-      github: "https://github.com/filipesvb/hora-mundi/tree/main",
-      live: "https://filipesvb.github.io/hora-mundi/",
+      github: "",
+      live: "",
     },
-    tags: [tagValues.JAVASCRIPT, tagValues.HTML, tagValues.CSS],
+    tags: [
+      tagValues.WORDPRESS,
+      tagValues.ELEMENTOR,
+      tagValues.FIGMA,
+      tagValues.CSS,
+    ],
+  },
+  {
+    id: "super-milk",
+    image: SuperMilk,
+    imagePosition: "top",
+    links: {
+      github: "",
+      live: "",
+    },
+    tags: [
+      tagValues.WORDPRESS,
+      tagValues.ELEMENTOR,
+      tagValues.FIGMA,
+      tagValues.CSS,
+    ],
   },
 ];

@@ -12,10 +12,15 @@
       "shortDescription": "Webapp para barbearia com agendamento, autenticação e roteamento, feito com Next.js, Tailwind, Shadcn/UI, Zod, PostgreSQL e Prisma.",
       "longDescription": "Aplicação web para barbearias desenvolvida durante a Fullstack Week, com recursos de agendamento, autenticação e roteamento dinâmico. Construída em Next.js para alta performance, estilizada com Tailwind CSS e componentes Shadcn/UI para uma interface moderna. A validação é feita com Zod, garantindo segurança nos dados. No backend, utiliza PostgreSQL integrado via Prisma ORM, oferecendo consultas eficientes e tipadas. Um projeto que combina boas práticas e tecnologias atuais para criar uma experiência completa e escalável."
     },
-    "hora-mundi": {
-      "title": "Hora Mundi",
-      "shortDescription": "Website simples feito com JavaScript, HTML e CSS, que mostra o horário atual ao redor do mundo usando lógica baseada em UTC. Utiliza Day.js para manipulação de datas e Micromodal para modais.",
-      "longDescription": "Website simples desenvolvido com JavaScript, HTML e CSS puro, que exibe o horário atual em diferentes partes do mundo usando lógica baseada em UTC. Conta com Day.js para manipulação de datas e Micromodal para modais acessíveis. Um projeto minimalista e responsivo, focado em funcionalidade e precisão."
+    "entre-trilhas": {
+      "title": "Entre Trilhas",
+      "shortDescription": "Projeto desenvolvido como exercício criativo e estretégico de design.",
+      "longDescription": "Entre Trilhas é um projeto fictício desenvolvido como um exercício criativo e estratégico de design. O objetivo principal foi explorar conceitos de identidade visual, experiência do usuário e design de interface. O projeto inclui a criação de um logotipo, paleta de cores, tipografia e layouts para diferentes plataformas, visando proporcionar uma experiência coesa e envolvente para os usuários interessados em trilhas e aventuras ao ar livre."
+    },
+    "super-milk": {
+      "title": "Super Milk",
+      "shortDescription": "Ideia de design para sorveteria artesanal.",
+      "longDescription": "Super Milk é um projeto fictício desenvolvido como estudo de identidade visual e experiência digital para uma sorveteria artesanal localizada em um ponto turístico. O Projeto nasceu com a intenção de traduzir, através do design, a alegria a leveza e o caráter artesanal da marca."
     }
   },
   "filter": {

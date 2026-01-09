@@ -12,10 +12,15 @@
       "shortDescription": "Barbershop webapp with booking, authentication, and routing, built using Next.js, Tailwind, Shadcn/UI, Zod, PostgreSQL, and Prisma.",
       "longDescription": "A complete barbershop web application developed during Fullstack Week, featuring appointment scheduling, authentication, and dynamic routing. Built with Next.js for high performance, styled using Tailwind CSS, and enhanced with Shadcn/UI components for a modern and accessible interface. Data validation is handled by Zod, ensuring security and reliability. On the backend, it uses PostgreSQL integrated with Prisma ORM, providing efficient and type-safe queries. This project showcases best practices and modern technologies to deliver a scalable and seamless user experience."
     },
-    "hora-mundi": {
-      "title": "Hora Mundi",
-      "shortDescription": "Simple website built with JavaScript, HTML, and CSS, showing the current time worldwide using UTC logic. Includes Day.js for date handling and Micromodal for modals.",
-      "longDescription": "Simple website built with JavaScript, HTML, and pure CSS to display the current time around the world using UTC logic. Utilizes Day.js for date handling and Micromodal for accessible modals. A minimal and responsive project focused on functionality and accuracy."
+    "entre-trilhas": {
+      "title": "Entre Trilhas",
+      "shortDescription": "Project developed as a creative and strategic design exercise.",
+      "longDescription": "Entre Trilhas is a fictional project developed as a creative and strategic design exercise. The main objective was to explore concepts of visual identity, user experience, and interface design. The project includes the creation of a logo, color palette, typography, and layouts for different platforms, aiming to provide a cohesive and engaging experience for users interested in trails and outdoor adventures."
+    },
+    "super-milk": {
+      "title": "Super Milk",
+      "shortDescription": "Design idea for an artisanal ice cream shop.",
+      "longDescription": "Super Milk is a fictional project developed as a visual identity and digital experience study for an artisanal ice cream shop located in a tourist area. The project was born with the intention of translating, through design, the joy, lightness, and artisanal character of the brand."
     }
   },
   "filter": {

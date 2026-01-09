@@ -35,7 +35,7 @@ const ProjectSingle = ({
   image,
   imagePosition,
 }: ProjectSingleProps) => {
-  const [isFlipped, setIsFlipped] = useState(false);
+  const [isFlipped, setIsFlipped] = useState(true);
   const hasToBeCentered = imagePosition === "center";
 
   function getTextoDestacado(desc: string) {
@@ -64,14 +64,14 @@ const ProjectSingle = ({
 
   return (
     // AVÔ
-    <div className={`perspective-[1000px] flex h-full w-full`}>
+    <div className={`flex h-full w-full perspective-[1000px]`}>
       {/* PAI */}
       <div
-        className={`border-muted-foreground duration-400 transform-3d relative flex min-h-[600px] w-full gap-5 overflow-visible rounded-lg border-2 transition-all ease-in ${isFlipped && "-rotate-y-180"} ${
+        className={`border-muted-foreground relative flex min-h-[600px] w-full gap-5 overflow-visible rounded-lg border-2 transition-all duration-400 ease-in transform-3d ${isFlipped && "-rotate-y-180"} ${
           inverted && "flex-row-reverse"
         }`}
       >
-        <div className="md:flex-3/5 hidden h-full w-full items-center justify-center px-2 md:flex">
+        <div className="hidden h-full w-full items-center justify-center px-2 md:flex md:flex-3/5">
           <div className="flex h-full w-full max-w-[300px] items-center">
             <Card3D
               hideBallText={true}
@@ -83,12 +83,12 @@ const ProjectSingle = ({
         </div>
 
         {/* FRENTE */}
-        <div className="growth-0 bg-background translate-z-0 backface-hidden relative flex h-full w-full flex-col justify-between gap-4 rounded-lg py-2 md:py-0">
+        <div className="growth-0 bg-background relative flex h-full w-full translate-z-0 flex-col justify-between gap-4 rounded-lg py-2 backface-hidden md:py-0">
           <div className="w-full px-4">
             <Button
               variant={"outline"}
               size={"icon"}
-              className="bg-background border-foreground z-3 absolute bottom-2 right-2 flex rounded-full shadow-2xl md:hidden"
+              className="bg-background border-foreground absolute right-2 bottom-2 z-3 flex rounded-full shadow-2xl md:hidden"
               onClick={handleFlip}
             >
               <Image className="stroke-foreground" size={32} />
@@ -96,7 +96,7 @@ const ProjectSingle = ({
             <CardTitle className="text-foreground text-left text-[2rem]">
               {title}
             </CardTitle>
-            <p className="text-muted-foreground md:max-h-70 max-h-60 w-full overflow-y-auto">
+            <p className="text-muted-foreground max-h-60 w-full overflow-y-auto md:max-h-70">
               {getTextoDestacado(description)}
             </p>
 
@@ -113,12 +113,12 @@ const ProjectSingle = ({
         </div>
 
         {/* TRÁS */}
-        <div className="-translate-z-1 rotate-y-180 backface-hidden absolute left-0 top-0 block h-full w-full overflow-hidden rounded-lg md:hidden">
-          <div className="z-1 relative h-full w-full">
+        <div className="absolute top-0 left-0 block h-full w-full -translate-z-1 rotate-y-180 overflow-hidden rounded-lg backface-hidden md:hidden">
+          <div className="relative z-1 h-full w-full">
             <motion.div
               animate={{ opacity: 1 }}
               initial={{ opacity: 0 }}
-              className="absolute bottom-2 right-2 flex h-full items-end"
+              className="absolute right-2 bottom-2 flex h-full items-end"
             >
               <Button
                 variant={"outline"}
