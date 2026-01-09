@@ -72,7 +72,7 @@ const ProjectSingle = ({
         }`}
       >
         <div className="hidden h-full w-full items-center justify-center px-2 md:flex md:flex-3/5">
-          <div className="flex h-full w-full max-w-[300px] items-center">
+          <div className="relative flex h-full w-full max-w-[300px] items-center">
             <Card3D
               hideBallText={true}
               title=""
@@ -115,6 +115,29 @@ const ProjectSingle = ({
         {/* TRÁS */}
         <div className="absolute top-0 left-0 block h-full w-full -translate-z-1 rotate-y-180 overflow-hidden rounded-lg backface-hidden md:hidden">
           <div className="relative z-1 h-full w-full">
+            <div
+              className={`bg-background absolute top-1 right-1 z-4 overflow-hidden rounded-full border shadow`}
+            >
+              {links.live !== "" ? (
+                <div className="flex items-center gap-2 px-4 py-2">
+                  <a
+                    href={links.live}
+                    target={"_blank"}
+                    className="text-foreground text-sm leading-none font-medium"
+                  >
+                    VEJA AO VIVO
+                  </a>
+                  <span className="inline-block h-2 w-2 animate-pulse rounded-full bg-red-400"></span>
+                </div>
+              ) : (
+                <div className="relative h-full w-full px-4 py-2">
+                  <span className="text-foreground pr-4 text-sm leading-none font-medium">
+                    EM CONSTRUÇÃO
+                  </span>
+                  <div className="absolute top-0 right-0 h-[120%] w-[15%] -skew-x-14 bg-yellow-300 bg-[repeating-linear-gradient(45deg,_#fffb00_0px,_#fffb00_10px,_#000000_10px,_#000000_20px)]"></div>
+                </div>
+              )}
+            </div>
             <motion.div
               animate={{ opacity: 1 }}
               initial={{ opacity: 0 }}
