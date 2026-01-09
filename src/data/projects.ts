@@ -3,6 +3,7 @@ import MyPortfolioImage from "@/assets/projects/images/myportfolio.png";
 import Barbershop from "@/assets/projects/images/Barbershop.png";
 import EntreTrilhas from "@/assets/projects/images/entreTrilhas.png";
 import SuperMilk from "@/assets/projects/images/supermilk.png";
+import Visivel from "@/assets/projects/images/Visivel.png";
 
 export type Project = {
   id: string;
@@ -69,6 +70,21 @@ export const projects: Project[] = [
   {
     id: "super-milk",
     image: SuperMilk,
+    imagePosition: "top",
+    links: {
+      github: "",
+      live: "",
+    },
+    tags: [
+      tagValues.WORDPRESS,
+      tagValues.ELEMENTOR,
+      tagValues.FIGMA,
+      tagValues.CSS,
+    ],
+  },
+  {
+    id: "visivel",
+    image: Visivel,
     imagePosition: "top",
     links: {
       github: "",

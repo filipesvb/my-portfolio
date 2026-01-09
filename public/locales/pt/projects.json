@@ -21,6 +21,11 @@
       "title": "Super Milk",
       "shortDescription": "Ideia de design para sorveteria artesanal.",
       "longDescription": "Super Milk é um projeto fictício desenvolvido como estudo de identidade visual e experiência digital para uma sorveteria artesanal localizada em um ponto turístico. O Projeto nasceu com a intenção de traduzir, através do design, a alegria a leveza e o caráter artesanal da marca."
+    },
+    "visivel": {
+      "title": "Visível",
+      "shortDescription": "Portifolio de fotografia focado em originalidade.",
+      "longDescription": "O intuito do projeto foi criar uma plataforma que não competisse com as imagens, mas que atuasse como extensão do olhar fotográfica. A interface foi pensada para ser contida, silenciosa e humana, permitindo que o ritmo das fotografias conduzisse a experiência do usuário."
     }
   },
   "filter": {
