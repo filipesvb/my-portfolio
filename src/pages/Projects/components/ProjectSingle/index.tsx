@@ -35,7 +35,9 @@ const ProjectSingle = ({
   image,
   imagePosition,
 }: ProjectSingleProps) => {
-  const [isFlipped, setIsFlipped] = useState(true);
+  const isSmallScreen =
+    typeof window !== "undefined" && window.innerWidth < 768;
+  const [isFlipped, setIsFlipped] = useState(isSmallScreen ? true : false);
   const hasToBeCentered = imagePosition === "center";
 
   function getTextoDestacado(desc: string) {
